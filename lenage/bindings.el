@@ -95,3 +95,6 @@
 
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)

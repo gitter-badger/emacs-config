@@ -1,11 +1,6 @@
 (require 'emms-setup)
 (emms-devel)
-(setq emms-player-list
-      '(;emms-player-mpd
-        ;; emms-player-mpg321
-        ;; emms-player-ogg123
-        emms-player-mplayer-playlist
-        emms-player-mplayer))
+(emms-default-players)
 
 ;; setup mpd
 (setq emms-player-mpd-server-name "localhost")

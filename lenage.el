@@ -6,9 +6,11 @@
 (load "lenage/global")
 (load "lenage/defuns")
 (load "lenage/bindings")
+(load "lenage/maxframe")
 (load "lenage/disabled")
 (load "lenage/fonts")
 (load "lenage/utf-8")
+(load "lenage/eshell")
 (load "lenage/scratch")
 (load "lenage/diff")
 (load "lenage/ido")
@@ -19,9 +21,25 @@
 (load "lenage/zoom")
 (load "lenage/flymake")
 (load "lenage/server-mode")
-;; (load "lenage/private" 'noerror)
+(load "lenage/auto-complete")
 (load "lenage/iswitchb")
+(load "lenage/yasnippet")
+(load "lenage/keyfreq")
+(load "lenage/webjump")
 (load "lenage/lang")
 (load "lenage/auto-complete")
 (vendor 'revbufs       'revbufs)
+(load "lenage/ruby-mode")
+(load "lenage/rails")
+(load "lenage/gist")
+(load "lenage/lighthouse")
+
+;; (load "lenage/emms")
+(vendor 'revbufs       'revbufs)
+
+;; emacs-weibo
 ;; (vendor 'weibo)
+;; (setq weibo-display-image nil)
+
+;; private setting
+(load "lenage/private" 'noerror)

@@ -12,7 +12,8 @@
 (setq package-archives
       '(("original"    . "http://tromey.com/elpa/")
         ("gnu"         . "http://elpa.gnu.org/packages/")
-        ("marmalade"   . "http://marmalade-repo.org/packages/")))
+        ("marmalade"   . "http://marmalade-repo.org/packages/")
+        ("melpa"       . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
 ;; Use command as the meta key
@@ -24,13 +25,6 @@
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;
-;; encoding
-
-(prefer-coding-system 'utf-8)
-(set-language-environment 'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
 
 (setq mac-allow-anti-aliasing t)
 ;; Highlight regions and add special behaviors to regions.
@@ -113,18 +107,3 @@
 
 ;; color-theme
 (load-theme 'tango-dark t)
-
-;; yasnippet
-(yas/load-directory (expand-file-name "snippets" "~/.emacs.d/"))
-
-
-;; maxframe
-(defvar my-fullscreen-p t "Check if fullscreen is on or off")
-(defun my-toggle-fullscreen ()
-  (interactive)
-  (setq my-fullscreen-p (not my-fullscreen-p))
-  (if my-fullscreen-p
-	  (restore-frame)
-	(maximize-frame)))
-
-(global-set-key (kbd "M-RET") 'my-toggle-fullscreen)

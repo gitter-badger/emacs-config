@@ -28,6 +28,9 @@
 (require 'erc-netsplit)
 (erc-netsplit-mode t)
 
+;; (require 'erc-spelling)
+;; (erc-spelling-mode 1)
+
 (erc-timestamp-mode t)
 (setq erc-timestamp-format "[%R]")
 
