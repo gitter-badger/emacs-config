@@ -9,7 +9,7 @@
 ;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
 ;;      )
 
-(set-frame-font "Monaco-12")
+(set-frame-font "Monaco-10")
 (set-fontset-font t 'han '("WenQuanYi Micro Hei Mono" . "unicode-bmp"))
 
 ;; To change a font size globally:

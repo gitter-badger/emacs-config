@@ -28,7 +28,6 @@
 (load "lenage/webjump")
 (load "lenage/lang")
 (load "lenage/auto-complete")
-(vendor 'revbufs       'revbufs)
 (load "lenage/ruby-mode")
 (load "lenage/rails")
 (load "lenage/gist")
