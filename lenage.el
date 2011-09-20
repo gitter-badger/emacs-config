@@ -18,7 +18,7 @@
 (load "lenage/dired")
 (load "lenage/recentf")
 (load "lenage/rectangle")
-(load "lenage/org")
+;;(load "lenage/org")
 (load "lenage/zoom")
 (load "lenage/flymake")
 (load "lenage/javascript")
@@ -27,7 +27,7 @@
 (load "lenage/server-mode")
 (load "lenage/private" 'noerror)
 
-;; (load "lenage/hl-line")
+(load "lenage/hl-line")
 ;; (load "lenage/iswitchb")
 
 (vendor 'color-theme)
