@@ -18,7 +18,7 @@
 (load "lenage/dired")
 (load "lenage/recentf")
 (load "lenage/rectangle")
-;;(load "lenage/org")
+(load "lenage/org")
 (load "lenage/zoom")
 (load "lenage/flymake")
 (load "lenage/javascript")
