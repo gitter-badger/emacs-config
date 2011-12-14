@@ -1,13 +1,13 @@
 ;;; Pretty colors
 
 (color-theme-initialize)
-(vendor 'color-theme-ir-black)
-(color-theme-ir-black)
+;; (vendor 'color-theme-ir-black)
+;; (color-theme-ir-black)
 
-;; (vendor 'color-theme-arjen)
-;; (color-theme-arjen)
+(vendor 'color-theme-arjen)
+(color-theme-arjen)
 
-;; (color-theme-reset-faces)
+;(color-theme-reset-faces)
 
 ;; Color-schemes that I thought were pleasing to the eye.  Most others are
 ;; pretty ugly.
