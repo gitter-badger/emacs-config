@@ -1,0 +1,55 @@
+(defun delete-whole-line ()
+  (interactive)
+  (let ((beg (progn (forward-line 0)
+                    (point))))
+    (forward-line 1)
+    (delete-region beg (point))))
+
+(defun kill-region-and-save ()
+  (interactive)
+  (save-excursion
+    (kill-ring-save (region-beginning) (region-end))
+    (kill-region (region-beginning) (region-end))))
+
+(defun indent-buffer ()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun delete-this-file ()
+  (interactive)
+  (or (buffer-file-name) (error "no file is currently being edited"))
+  (when (yes-or-no-p "Really delete this file?")
+    (delete-file (buffer-file-name))
+    (kill-this-buffer)))
+
+(defun swap-window-positions ()
+  "Swap the buffer positions of this window and the next one."
+  (interactive)
+  (let ((other-window (next-window (selected-window) 'no-minibuf)))
+    (let ((other-window-buffer (window-buffer other-window))
+          (other-window-hscroll (window-hscroll other-window))
+          (other-window-point (window-point other-window))
+          (other-window-start (window-start other-window)))
+      (set-window-buffer other-window (current-buffer))
+      (set-window-hscroll other-window (window-hscroll (selected-window)))
+      (set-window-point other-window (point))
+      (set-window-start other-window (window-start (selected-window)))
+      (set-window-buffer (selected-window) other-window-buffer)
+      (set-window-hscroll (selected-window) other-window-hscroll)
+      (set-window-point (selected-window) other-window-point)
+      (set-window-start (selected-window) other-window-select))
+    (start-window other-window)))
+
+(defun cat-run (command-string-list)
+  (let (cmd)
+    (setq cmd (combine-and-quote-strings command-string-list))
+    (message cmd)
+    (shell-command-to-string cmd)))
+
+(defun list-to-string (list &optional delim)
+  (mapconcat 'identity list delim))
+
+(defun replace-regexp-and-return (from to)
+  (save-excursion
+    (while (re-search-forward from nil t)
+      (replace-match to))))
