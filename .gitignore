@@ -2,3 +2,5 @@ backups/
 auto-save-list/
 *.swp
 *.swo
+el-get/
+elpa/
