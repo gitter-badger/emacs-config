@@ -29,9 +29,10 @@
 (load "lenage/hl-line")
 ;; (load "lenage/iswitchb")
 
+(vendor 'ido)
 (vendor 'color-theme)
 (vendor 'ruby-mode)
-(vendor 'rinari)
+;; (vendor 'rinari)
 (vendor 'textmate)
 (vendor 'maxframe)
 (vendor 'filladapt)
@@ -42,7 +43,7 @@
 (vendor 'full-ack      'ack 'ack-same 'ack-find-same-file 'ack-find-file 'ack-interactive)
 (vendor 'cdargs        'cv 'cdargs)
 (vendor 'magit         'magit-status)
-(vendor 'psvn          'svn-status)
+;(vendor 'psvn          'svn-status)
 (vendor 'js2-mode      'js2-mode)
 (vendor 'markdown-mode 'markdown-mode)
 (vendor 'textile-mode  'textile-mode)
@@ -58,5 +59,5 @@
 (vendor 'mode-line-bell)
 (vendor 'revbufs       'revbufs)
 
-;; (vendor 'ruby-electric 'ruby-electric-mode)
-;; (vendor 'auctex)
+(vendor 'ruby-electric 'ruby-electric-mode)
+;;(vendor 'auctex)

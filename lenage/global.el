@@ -8,7 +8,16 @@
 
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
+;;
+;; encoding
 
+(prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+
+(setq mac-allow-anti-aliasing t)
 ;; Highlight regions and add special behaviors to regions.
 ;; "C-h d transient" for more info
 (setq transient-mark-mode t)
@@ -31,6 +40,8 @@
 ;; (setq visible-bell t)
 
 ;; Make sure all backup files only live in one place
+(setq make-backup-files nil)
+(setq auto-save-default nil)
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
 ;; Gotta see matching parens
@@ -53,6 +64,23 @@
 (setq-default ispell-program-name "aspell")
 (setq ispell-list-command "list")
 (setq ispell-extra-args '("--sug-mode=ultra"))
+
+;; tab width
+(setq-default tab-width 2)
+(setq js-indent-level 2)
+(setq-default indent-tabs-mode nil)
+(setq inhibit-startup-message t)
+(setq ring-bell-function 'ignore)
+(setq redisplay-dont-pause t)
+
+(delete-selection-mode t)
+(scroll-bar-mode 0)
+(tool-bar-mode 0)
+(blink-cursor-mode t)
+(show-paren-mode t)
+(column-number-mode)
+(set-fringe-style 0)
+(tooltip-mode -1)
 
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)
