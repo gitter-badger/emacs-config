@@ -4,3 +4,5 @@ auto-save-list/
 *.swo
 el-get/
 elpa/
+*.#*
+url/

@@ -9,8 +9,8 @@
 (load "el-get-package-hooks.el")
 
 (setq el-get-sources
-  '((:name css-mode 
-           :type elpa 
+  '((:name css-mode
+           :type elpa
            :after (lambda () (css-mode-hook)))
     (:name textmate
            :type git
@@ -31,20 +31,34 @@
            :load-path (".")
            :features rhtml-mode
            :after (lambda () (rhtml-mode-hook)))
-    (:name yaml-mode 
+    (:name yaml-mode
            :type git
            :url "git://github.com/yoshiki/yaml-mode.git"
            :features yaml-mode
            :after (lambda () (yaml-mode-hook)))
     (:name xcode
            :type git
-           :url "git@github.com:mig/xcode.el.git"
+           :url "git://github.com/mig/xcode.el.git"
            :load "xcode.el")
+    (:name ruby-mode
+           :type git
+           :url "git://github.com/david/ruby-mode.git"
+           :load "ruby-mode.el"
+           :load "rdoc-mode.el"
+           :load "inf-ruby.el")
+    (:name haml-mode
+           :type git
+           :url "git://github.com/nex3/haml-mode.git"
+           :load "haml-mode.el")
+    (:name sass-mode
+           :type git
+           :url "git://github.com/nex3/sass-mode.git"
+           :load "sass-mode.el")
     (:name nterm
            :after (lambda () (nterm-hook)))
     (:name full-ack :type elpa)
     (:name rainbow-mode :type elpa)))
-	
+
 (setq my-packages
       (append
        '(package24 markdown-mode scratch)
