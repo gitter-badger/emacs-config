@@ -39,6 +39,10 @@
 (global-linum-mode 1)
 ;; (setq linum-format "%d ")
 
+;; fill-colume to 120
+(setq-default fill-column 125)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
 ;; load themes
 (set-frame-font "Monaco-13")
 (setq my-theme-dir "~/.emacs.d/themes")

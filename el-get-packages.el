@@ -54,6 +54,10 @@
            :type git
            :url "git://github.com/nex3/sass-mode.git"
            :load "sass-mode.el")
+    (:name scss-mode
+           :type git
+           :url "git://github.com/antonj/scss-mode.git"
+           :load "scss-mode.el")
     (:name nterm
            :after (lambda () (nterm-hook)))
     (:name full-ack :type elpa)
