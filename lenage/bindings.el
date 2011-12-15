@@ -84,4 +84,5 @@
 ;; Personal textmate.el bindings
 (global-set-key (kbd "C-c f") 'textmate-goto-file)
 (global-set-key [(control return)] 'textmate-next-line)
+(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 

@@ -49,6 +49,13 @@
       (kill-buffer nil))
   (delete-window))
 
+(defun recentf-ido-find-file ()
+  "Find a recent file use ido."
+  (interactive)
+  (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
+    (when file
+      (find-file file))))
+
 (defun delete-other-windows-replacement (&optional p)
   "Make the selected window fill its frame.  If called with PREFIX,
 kill all other visible buffers."
