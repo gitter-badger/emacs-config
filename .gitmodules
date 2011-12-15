@@ -7,9 +7,6 @@
 [submodule "vendor/magit"]
 	path = vendor/magit
 	url = git://github.com/magit/magit.git
-[submodule "vendor/color-theme"]
-	path = vendor/color-theme
-	url = git://github.com/emacsmirror/color-theme.git
 [submodule "vendor/color-theme-arjen"]
 	path = vendor/color-theme-arjen
 	url = git://github.com/credmp/color-theme-arjen.git
