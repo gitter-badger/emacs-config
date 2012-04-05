@@ -91,3 +91,6 @@
 [submodule "vendor/ido"]
 	path = vendor/ido
 	url = https://github.com/pookleblinky/ido.git
+[submodule "vendor/emacs-color-theme-solarized"]
+	path = vendor/emacs-color-theme-solarized
+	url = git://github.com/sellout/emacs-color-theme-solarized.git

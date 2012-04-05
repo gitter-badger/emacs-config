@@ -32,7 +32,7 @@
 (vendor 'ido)
 (vendor 'color-theme)
 (vendor 'ruby-mode)
-;; (vendor 'rinari)
+;(vendor 'rinari)
 (vendor 'textmate)
 (vendor 'maxframe)
 (vendor 'filladapt)
