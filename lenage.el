@@ -26,7 +26,7 @@
 (load "lenage/server-mode")
 (load "lenage/private" 'noerror)
 
-(load "lenage/hl-line")
+;;(load "lenage/hl-line")
 (load "lenage/iswitchb")
 
 (vendor 'ido)
