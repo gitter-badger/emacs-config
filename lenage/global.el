@@ -82,5 +82,6 @@
 (set-fringe-style 0)
 (tooltip-mode -1)
 
+
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)

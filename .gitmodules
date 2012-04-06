@@ -88,3 +88,15 @@
 [submodule "vendor/emacs-slim"]
 	path = vendor/emacs-slim
 	url = https://github.com/minad/emacs-slim.git
+[submodule "vendor/haskell-mode"]
+	path = vendor/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
+[submodule "flymake"]
+	path = flymake
+	url = https://github.com/illusori/emacs-flymake.git
+[submodule "vendor/flymake"]
+	path = vendor/flymake
+	url = https://github.com/illusori/emacs-flymake.git
+[submodule "vendor/ghc-mod"]
+	path = vendor/ghc-mod
+	url = https://github.com/kazu-yamamoto/ghc-mod.git
