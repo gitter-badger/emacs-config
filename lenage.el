@@ -55,3 +55,4 @@
 (vendor 'mode-line-bell)
 (vendor 'revbufs       'revbufs)
 (vendor 'rvm)
+(vendor 'slim-mode)

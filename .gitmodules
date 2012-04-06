@@ -85,3 +85,6 @@
 [submodule "vendor/rvm"]
 	path = vendor/rvm
 	url = https://github.com/senny/rvm.el.git
+[submodule "vendor/emacs-slim"]
+	path = vendor/emacs-slim
+	url = https://github.com/minad/emacs-slim.git
