@@ -54,3 +54,4 @@
 (vendor 'feature-mode)
 (vendor 'mode-line-bell)
 (vendor 'revbufs       'revbufs)
+(vendor 'rvm)

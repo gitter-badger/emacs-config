@@ -7,12 +7,6 @@
 [submodule "vendor/magit"]
 	path = vendor/magit
 	url = git://github.com/magit/magit.git
-[submodule "vendor/color-theme-arjen"]
-	path = vendor/color-theme-arjen
-	url = git://github.com/credmp/color-theme-arjen.git
-[submodule "vendor/color-theme-ir-black"]
-	path = vendor/color-theme-ir-black
-	url = git://github.com/rmm5t/color-theme-ir-black.git
 [submodule "vendor/markdown-mode"]
 	path = vendor/markdown-mode
 	url = git://github.com/defunkt/markdown-mode.git
@@ -52,9 +46,6 @@
 [submodule "vendor/htmlize"]
 	path = vendor/htmlize
 	url = git://github.com/rmm5t/htmlize.git
-[submodule "vendor/jekyll.el"]
-	path = vendor/jekyll.el
-	url = git://github.com/talison/jekyll.el.git
 [submodule "vendor/full-ack"]
 	path = vendor/full-ack
 	url = git://github.com/nschum/full-ack.git
@@ -85,12 +76,12 @@
 [submodule "vendor/shell-pop"]
 	path = vendor/shell-pop
 	url = https://github.com/rmm5t/shell-pop.git
-[submodule "vendor/rvm.el"]
-	path = vendor/rvm.el
-	url = https://github.com/senny/rvm.el.git
 [submodule "vendor/ido"]
 	path = vendor/ido
 	url = https://github.com/pookleblinky/ido.git
 [submodule "vendor/emacs-color-theme-solarized"]
 	path = vendor/emacs-color-theme-solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "vendor/rvm"]
+	path = vendor/rvm
+	url = https://github.com/senny/rvm.el.git
