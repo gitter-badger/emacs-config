@@ -56,5 +56,4 @@
 (vendor 'revbufs       'revbufs)
 (vendor 'rvm)
 (vendor 'slim-mode)
-
-(textmate-mode)
+(vendor 'haskell-mode)

@@ -76,7 +76,6 @@
 (delete-selection-mode t)
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
-(blink-cursor-mode t)
 (show-paren-mode t)
 (column-number-mode)
 (set-fringe-style 0)

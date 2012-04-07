@@ -1,4 +1,6 @@
+(add-to-list 'load-path "~/Library/Haskell/ghc-7.0.4/lib/ghc-mod-1.10.12/share")
 (load "vendor/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(autoload 'ghc-init' "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
