@@ -81,6 +81,7 @@
 (set-fringe-style 0)
 (tooltip-mode -1)
 
-
+;; Use newsticker read news
+(add-hook 'newsticker-mode-hook 'imenu-add-menubar-index)
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)

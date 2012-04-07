@@ -57,3 +57,5 @@
 (vendor 'rvm)
 (vendor 'slim-mode)
 (vendor 'haskell-mode)
+(vendor 'autopair)
+

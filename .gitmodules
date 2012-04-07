@@ -100,3 +100,6 @@
 [submodule "vendor/ghc-mod"]
 	path = vendor/ghc-mod
 	url = https://github.com/kazu-yamamoto/ghc-mod.git
+[submodule "vendor/autopair"]
+	path = vendor/autopair
+	url = https://github.com/emacsmirror/autopair.git
