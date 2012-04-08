@@ -23,8 +23,8 @@
 (setq transient-mark-mode t)
 
 ;; Display line and column numbers
-(setq line-number-mode    t)
-(setq column-number-mode  t)
+(setq column-number-mode t)
+(setq line-number-mode  t)
 
 ;; Emacs gurus don't need no stinking scroll bars
 (when (fboundp 'toggle-scroll-bar)
@@ -77,11 +77,11 @@
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 (show-paren-mode t)
-(column-number-mode)
 (set-fringe-style 0)
 (tooltip-mode -1)
 
 ;; Use newsticker read news
-(add-hook 'newsticker-mode-hook 'imenu-add-menubar-index)
+;;(add-hook 'newsticker-mode-hook 'imenu-add-menubar-index)
+
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)
