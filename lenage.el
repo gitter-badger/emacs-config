@@ -58,5 +58,8 @@
 (vendor 'slim-mode)
 (vendor 'haskell-mode)
 (vendor 'autopair)
+(vendor 'ace-jump-mode)
 
+(textmate-mode)
+(autopair-mode)
 ;;(vendor 'icicles)

@@ -106,3 +106,9 @@
 [submodule "vendor/icicles"]
 	path = vendor/icicles
 	url = https://github.com/emacsmirror/icicles.git
+[submodule "vendor/todotxt-mode"]
+	path = vendor/todotxt-mode
+	url = https://github.com/avillafiorita/todotxt-mode.git
+[submodule "vendor/ace-jump-mode"]
+	path = vendor/ace-jump-mode
+	url = https://github.com/winterTTr/ace-jump-mode.git

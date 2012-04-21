@@ -62,7 +62,9 @@
 (global-set-key (kbd "M-B") 'backward-to-word)
 
 ;; Personal textmate.el bindings
-;(global-set-key (kbd "C-c f") 'textmate-goto-file)
+(global-set-key (kbd "C-x f") 'textmate-goto-file)
 (global-set-key [(control return)] 'textmate-next-line)
 (global-set-key (kbd "C-c f") 'recentf-ido-find-file)
 
+;;ace-jump-mode
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
