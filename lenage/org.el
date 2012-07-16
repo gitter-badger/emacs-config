@@ -7,9 +7,16 @@
 (setq org-log-done t)
 
 (setq org-agenda-files (list "~/org/work.org"
-                             "~/org/home.org"
-                             "~/org/emacsnote.org"))
+                             "~/org/home.org"))
 
+(setq org-agenda-custom-commands
+      '(("D" "Daliy Action List"
+         ((agenda "" ((org-agenda-ndays 1 )
+                      (org-agenda-sorting-strategy '(time-up priority-down tag-up))
+                      ;; (org-deadline-warning-days 0)
+                      ;; (org-agenda-todo-keyword-format "[ ]"))
+                      )
+                      )))))
 
 ;; (global-set-key (kbd "C-c r") 'remember)
 ;; (add-hook 'remember-mode-hook 'org-remember-apply-template)

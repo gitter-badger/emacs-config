@@ -25,7 +25,7 @@
 (load "lenage/mac")
 (load "lenage/server-mode")
 (load "lenage/private" 'noerror)
-
+(load "lenage/rails")
 (load "lenage/hl-line")
 (load "lenage/iswitchb")
 
@@ -57,9 +57,8 @@
 (vendor 'rvm)
 (vendor 'slim-mode)
 (vendor 'haskell-mode)
-(vendor 'autopair)
-(vendor 'ace-jump-mode)
+;; (vendor 'ace-jump-mode)
 
 (textmate-mode)
-(autopair-mode)
+
 ;;(vendor 'icicles)

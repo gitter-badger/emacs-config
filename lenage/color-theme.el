@@ -5,4 +5,4 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 ;(color-theme-reset-faces)
 (require 'color-theme-solarized)
-(color-theme-solarized-dark)
+(color-theme-solarized-light)

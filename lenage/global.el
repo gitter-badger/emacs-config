@@ -5,7 +5,7 @@
 
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)
-
+(setq user-mail-address "lendage@gmail.com")
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;
@@ -25,6 +25,8 @@
 ;; Display line and column numbers
 (setq column-number-mode t)
 (setq line-number-mode  t)
+;; Add newline at end of files
+(setq require-final-newline t)
 
 ;; Emacs gurus don't need no stinking scroll bars
 (when (fboundp 'toggle-scroll-bar)
@@ -65,6 +67,9 @@
 (setq ispell-list-command "list")
 (setq ispell-extra-args '("--sug-mode=ultra"))
 
+;; Don't display password in shell
+(add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
+
 ;; tab width
 (setq-default tab-width 2)
 (setq js-indent-level 2)
@@ -79,7 +84,7 @@
 (show-paren-mode t)
 (set-fringe-style 0)
 (tooltip-mode -1)
-
+(electric-pair-mode t)
 ;; Use newsticker read news
 ;;(add-hook 'newsticker-mode-hook 'imenu-add-menubar-index)
 

@@ -100,9 +100,6 @@
 [submodule "vendor/ghc-mod"]
 	path = vendor/ghc-mod
 	url = https://github.com/kazu-yamamoto/ghc-mod.git
-[submodule "vendor/autopair"]
-	path = vendor/autopair
-	url = https://github.com/emacsmirror/autopair.git
 [submodule "vendor/icicles"]
 	path = vendor/icicles
 	url = https://github.com/emacsmirror/icicles.git
@@ -112,3 +109,9 @@
 [submodule "vendor/ace-jump-mode"]
 	path = vendor/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
+[submodule "vendor/twittering-mode"]
+	path = vendor/twittering-mode
+	url = git://github.com/hayamiz/twittering-mode.git
+[submodule "vendor/rhtml"]
+	path = vendor/rhtml
+	url = https://github.com/eschulte/rhtml.git
