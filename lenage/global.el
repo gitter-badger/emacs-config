@@ -1,4 +1,11 @@
 ;;; Generic emacs settings I cannot live without
+;; set packages
+(require 'package)
+(setq package-archives
+      '(("original"    . "http://tromey.com/elpa/")
+       ("gnu"         . "http://elpa.gnu.org/packages/")
+       ("marmalade"   . "http://marmalade-repo.org/packages/")))
+(package-initialize)
 
 ;; Use command as the meta key
 ;; (setq ns-command-modifier  'meta)
