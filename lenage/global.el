@@ -3,8 +3,8 @@
 (require 'package)
 (setq package-archives
       '(("original"    . "http://tromey.com/elpa/")
-       ("gnu"         . "http://elpa.gnu.org/packages/")
-       ("marmalade"   . "http://marmalade-repo.org/packages/")))
+        ("gnu"         . "http://elpa.gnu.org/packages/")
+        ("marmalade"   . "http://marmalade-repo.org/packages/")))
 (package-initialize)
 
 ;; Use command as the meta key
@@ -32,6 +32,10 @@
 ;; Display line and column numbers
 (setq column-number-mode t)
 (setq line-number-mode  t)
+
+;;; Highlight current line
+(global-hl-line-mode 1)
+
 ;; Add newline at end of files
 (setq require-final-newline t)
 
@@ -80,7 +84,11 @@
 ;; tab width
 (setq-default tab-width 2)
 (setq js-indent-level 2)
+(setq c-basic-offset 4)
+(setq css-indent-offset 2)
+(setq sh-basic-offset 2)
 (setq-default indent-tabs-mode nil)
+
 (setq inhibit-startup-message t)
 (setq ring-bell-function 'ignore)
 (setq redisplay-dont-pause t)
@@ -92,8 +100,9 @@
 (set-fringe-style 0)
 (tooltip-mode -1)
 (electric-pair-mode t)
-;; Use newsticker read news
-;;(add-hook 'newsticker-mode-hook 'imenu-add-menubar-index)
 
-;; zap-up-to-char, forward-to-word, backward-to-word, etc
+;; RVM
+(rvm-use-default)
+(rvm-autodetect-ruby)
+
 (require 'misc)

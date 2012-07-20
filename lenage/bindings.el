@@ -55,16 +55,13 @@
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-
 ;; Improved navigation and editing (assumes misc.el)
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
 (global-set-key (kbd "M-F") 'forward-to-word)
 (global-set-key (kbd "M-B") 'backward-to-word)
 
-;; Personal textmate.el bindings
-(global-set-key (kbd "C-x f") 'textmate-goto-file)
-(global-set-key [(control return)] 'textmate-next-line)
-(global-set-key (kbd "C-c f") 'recentf-ido-find-file)
+;; Smart Tabs
+(global-set-key (kbd "TAB") 'smart-tab)
 
 ;;ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)

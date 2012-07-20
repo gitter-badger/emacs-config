@@ -1,7 +1,6 @@
 ;;; Rails
 
 ;; ;; Rinari
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rinari"))
 (require 'rinari)
 
 (defalias 'rake 'rinari-rake)
