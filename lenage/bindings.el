@@ -3,18 +3,7 @@
 ;; How to Define Keyboard Shortcuts in Emacs
 ;; http://xahlee.org/emacs/keyboard_shortcuts.html
 
-;; Window manipulation
-;(global-set-key [(control kp-6)] 'enlarge-window-horizontally)
-;(global-set-key [(control kp-4)] 'shrink-window-horizontally)
-;(global-set-key [(control kp-8)] 'enlarge-window)
-;(global-set-key [(control kp-2)] 'shrink-window)
-
-;; Find stuff
-(global-set-key [(f2)]              'ack-default-directory)
-(global-set-key [(control f2)]      'ack-same)
-(global-set-key [(control meta f2)] 'ack)
-(global-set-key [(meta f2)]         'find-name-dired)
-(global-set-key [(shift f2)]        'occur)
+(global-set-key (kbd "C-M-h") 'backward-kill-word)
 
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
@@ -28,7 +17,7 @@
 (global-set-key [(f8)]         'indent-region)
 (global-set-key [(control f8)] 'align)
 (global-set-key [(shift f8)]   'align-current)
-(global-set-key [(meta f8)]    'align-regexp)
+(global-set-key (kbd "C-x \\")    'align-regexp)
 
 ;; Version control and change related
 ;(global-set-key [(control f9)]      'rails-svn-status-into-root)  ;; Move to rails mode?
@@ -60,8 +49,33 @@
 (global-set-key (kbd "M-F") 'forward-to-word)
 (global-set-key (kbd "M-B") 'backward-to-word)
 
+;; Completion that uses many different methods to find options
+(global-set-key (kbd "M-/") 'hippie-expand)
+
 ;; Smart Tabs
 (global-set-key (kbd "TAB") 'smart-tab)
 
-;;ace-jump-mode
+;; ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+;; font-size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; use regex search by default
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "\C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+
+;; File finding
+(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-x C-p") 'find-file-at-point)
+
+;; window switching
+(windmove-default-keybindings) ;; Shift+direction
+(global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
+(global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
+
+;; Indentation help
+(global-set-key (kbd "C-x ^") 'join-line)

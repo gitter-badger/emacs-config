@@ -105,4 +105,13 @@
 (rvm-use-default)
 (rvm-autodetect-ruby)
 
-(require 'misc)
+;; yasnippet
+(add-to-list 'load-path
+             (expand-file-name  "yasnippet"
+                                (expand-file-name "src"
+                                                  "~/.emacs.d/")))
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory (expand-file-name "snippets" "~/.emacs.d/"))
+
+;; (require 'misc)

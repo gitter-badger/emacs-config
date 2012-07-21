@@ -1,6 +1,7 @@
 ;;; Fonts
 
 ;; From: http://community.schemewiki.org/cgi-bin/scheme.cgi?Emacs
+
 (and window-system
      (create-fontset-from-fontset-spec
       (concat
