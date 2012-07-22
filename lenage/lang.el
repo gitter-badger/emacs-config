@@ -16,3 +16,7 @@
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; CSS mode
+(defun all-css-modes() (css-mode) (rainbow-mode))
+(add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
