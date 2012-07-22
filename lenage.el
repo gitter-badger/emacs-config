@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
-(setq custom-file "~/.emacs.d/lenage/custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
 (load "lenage/env")
