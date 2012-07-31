@@ -25,5 +25,6 @@
 (load "lenage/iswitchb")
 (load "lenage/lang")
 (load "lenage/ruby-mode")
+(load "lenage/rails")
 ;; (load "lenage/auto-complete")
 (vendor 'revbufs       'revbufs)
