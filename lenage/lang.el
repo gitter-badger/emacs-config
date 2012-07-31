@@ -8,9 +8,6 @@
 ;; lua mode
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 
-;; ruby mode
-
-
 ;; yaml mode
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook 'yaml-mode-hook
@@ -20,3 +17,13 @@
 ;; CSS mode
 (defun all-css-modes() (css-mode) (rainbow-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
+
+;; markdown-mode
+(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.text$" . markdown-mode))
+
+(eval-after-load 'markdown-mode
+  '(progn
+     (define-key markdown-mode-map (kbd "C-c C-v") 'markdown-preview)
+     ))

@@ -52,9 +52,6 @@
 ;; Completion that uses many different methods to find options
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-;; Smart Tabs
-(global-set-key (kbd "TAB") 'smart-tab)
-
 ;; ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
@@ -78,4 +75,17 @@
 (global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
 ;; Indentation help
-(global-set-key (kbd "C-x ^") 'join-line)
+(global-set-key (kbd "C-x j") 'join-line)
+
+;; Mark-multiple and friends
+(defun duplicate-line ()
+  (interactive)
+  (save-excursion
+    (let ((line-text (buffer-substring-no-properties
+                      (line-beginning-position)
+                      (line-end-position))))
+      (move-end-of-line 1)
+      (newline)
+      (insert line-text))))
+
+(global-set-key (kbd "C-c p") 'duplicate-line)

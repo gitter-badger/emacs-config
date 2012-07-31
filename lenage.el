@@ -6,6 +6,7 @@
 (load "lenage/global")
 (load "lenage/defuns")
 (load "lenage/bindings")
+(load "lenage/tabs")
 (load "lenage/disabled")
 (load "lenage/fonts")
 (load "lenage/utf-8")
@@ -21,9 +22,8 @@
 (load "lenage/mac")
 (load "lenage/server-mode")
 (load "lenage/private" 'noerror)
-(load "lenage/rails")
 (load "lenage/iswitchb")
 (load "lenage/lang")
 (load "lenage/ruby-mode")
-
+;; (load "lenage/auto-complete")
 (vendor 'revbufs       'revbufs)

@@ -2,7 +2,7 @@
 *.swp
 *.swo
 .#*
-
+*.dat
 ## private file
 ede-projects.el
 
