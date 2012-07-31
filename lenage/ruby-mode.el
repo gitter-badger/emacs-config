@@ -1,5 +1,7 @@
 ;;; Ruby
 
+(defalias 'ri 'yari)
+(global-set-key (kbd "C-h r") 'ri)
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer()
    "Evaluate the buffer with ruby."
@@ -16,7 +18,7 @@
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
-            ;; (ruby-electric-mode)
+            (ruby-end-mode)
             (local-set-key [(control c) (control e)] 'ruby-insert-end)
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)

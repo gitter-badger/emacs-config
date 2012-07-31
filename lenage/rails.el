@@ -1,8 +1,5 @@
 ;;; Rails
 
-;; ;; Rinari
-(require 'rinari)
-
 (defalias 'rake 'rinari-rake)
 
 ;; ;; rhtml-mode
@@ -22,8 +19,8 @@
 ;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/emacs-rails-reloaded"))
 ;; (require 'rails-autoload)
 
-(define-key rinari-minor-mode-map (kbd "C-c t") 'rinari-find-test)
-(define-key rinari-minor-mode-map (kbd "C-c r") 'rinari-find-rspec)
-(define-key rinari-minor-mode-map (kbd "C-c m") 'rinari-find-model)
-(define-key rinari-minor-mode-map (kbd "C-c c") 'rinari-find-controller)
-(define-key rinari-minor-mode-map (kbd "C-c v") 'rinari-find-view)
+;; (define-key rinari-minor-mode-map (kbd "C-c t") 'rinari-find-test)
+;; (define-key rinari-minor-mode-map (kbd "C-c r") 'rinari-find-rspec)
+;; (define-key rinari-minor-mode-map (kbd "C-c m") 'rinari-find-model)
+;; (define-key rinari-minor-mode-map (kbd "C-c c") 'rinari-find-controller)
+;; (define-key rinari-minor-mode-map (kbd "C-c v") 'rinari-find-view)
