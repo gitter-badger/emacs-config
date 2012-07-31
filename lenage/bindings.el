@@ -89,3 +89,6 @@
       (insert line-text))))
 
 (global-set-key (kbd "C-c p") 'duplicate-line)
+
+;; expand-region
+(global-set-key (kbd "C-=") 'er/expand-region)
