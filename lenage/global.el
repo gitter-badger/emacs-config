@@ -5,6 +5,7 @@
 (require 'uniquify)
 (require 'ansi-color)
 (require 'recentf)
+(require 'flymake)
 
 ;; set packages
 (require 'package)
@@ -120,17 +121,10 @@
 (rvm-autodetect-ruby)
 
 ;; yasnippet
-(add-to-list 'load-path
-             (expand-file-name  "yasnippet"
-                                (expand-file-name "src"
-                                                  "~/.emacs.d/")))
-(require 'yasnippet)
-(yas/initialize)
 (yas/load-directory (expand-file-name "snippets" "~/.emacs.d/"))
 
 
 ;; maxframe
-(require 'maxframe)
 (defvar my-fullscreen-p t "Check if fullscreen is on or off")
 (defun my-toggle-fullscreen ()
   (interactive)
