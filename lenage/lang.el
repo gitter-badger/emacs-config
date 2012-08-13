@@ -19,6 +19,7 @@
 (defun all-css-modes() (css-mode) (rainbow-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
 
+
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
@@ -28,3 +29,14 @@
   '(progn
      (define-key markdown-mode-map (kbd "C-c C-v") 'markdown-preview)
      ))
+
+
+;; go mode
+(add-hook 'go-mode-hook
+          (lambda()
+            (setq tab-width 4)))
+
+;; Haskell mode
+(add-hook 'haskell-mode-hook
+          (lambda()
+            (setq tab-width 4)))
