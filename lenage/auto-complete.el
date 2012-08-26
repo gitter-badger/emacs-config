@@ -4,7 +4,7 @@
 (setq ac-auto-start t)
 (setq ac-auto-show-menu nil)
 (setq ac-dwim nil) ; To get pop-ups with docs even if a word is uniquely completed
-(setq ac-ignores ".")
+(setq ac-ignores '("." "=" "@"))
 
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
