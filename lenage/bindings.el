@@ -92,9 +92,3 @@
 
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
-
-;; C-x C-x open Eshell
-(global-set-key (kbd "C-x C-x")
-                      (lambda ()
-                        (interactive)
-                        (eshell)))

@@ -1,7 +1,7 @@
 ;;; Ruby
 
 (defalias 'ri 'yari)
-(global-set-key (kbd "C-h r") 'ri)
+;; (global-set-key (kbd "C-h r") 'ri)
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer()
    "Evaluate the buffer with ruby."

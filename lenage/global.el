@@ -104,7 +104,6 @@
 (delete-selection-mode t)
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
-(show-paren-mode t)
 (set-fringe-style 0)
 (tooltip-mode -1)
 (electric-pair-mode t)

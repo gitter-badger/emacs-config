@@ -1,8 +1,11 @@
 (require 'emms-setup)
 (emms-devel)
-(emms-default-players)
-
-(add-hook 'emms-player-started-hook 'emms-show)
+;; (emms-default-players)
+(setq emms-player-list
+      '(emms-player-mplayer-playlist
+        emms-player-mplayer))
+;; Don't show anything when start play a song, just playing
+;; (add-hook 'emms-player-started-hook 'emms-show)
 (setq emms-show-format "Now Playing: %s"
       emms-info-asynchronously nil
       emms-source-default-directory "~/Music/iTunes/iTunes Media/"
