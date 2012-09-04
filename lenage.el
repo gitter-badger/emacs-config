@@ -28,4 +28,5 @@
 (load "lenage/rails")
 (load "lenage/auto-complete")
 (load "lenage/emms")
+;; (load "lenage/gnus")
 (vendor 'revbufs       'revbufs)
