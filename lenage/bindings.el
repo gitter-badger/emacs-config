@@ -7,7 +7,6 @@
 
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
-;; (global-set-key [(f4)]    'kmacro-end-or-call-macro)  ;; already defined
 
 ;; Refresh-like
 (global-set-key [(f5)]         'revert-buffer)
@@ -20,11 +19,8 @@
 (global-set-key (kbd "C-x \\")    'align-regexp)
 
 ;; Version control and change related
-;(global-set-key [(control f9)]      'rails-svn-status-into-root)  ;; Move to rails mode?
-;(global-set-key [(control meta f9)] (lambda () (interactive) (svn-status default-directory)))
 (global-set-key [(control f9)] (lambda () (interactive) (magit-status default-directory)))
 (global-set-key [(f9)]         (lambda () (interactive) (magit-status default-directory)))
-;;(global-set-key [(meta f9)]    'autotest-switch)  ;; Move to ruby/rails mode?
 
 ;; Repeat
 (global-set-key [(control z)] 'repeat) ; was suspend-frame
@@ -37,6 +33,9 @@
 
 ;; Find matching parens
 (global-set-key (kbd "C-'") 'match-paren)
+
+;; Copry current buffer file name to clipboard
+(global-set-key (kbd "C-c C-v") 'prelude-copy-file-name-to-clipboard)
 
 ;; Easy inserts
 (global-set-key (kbd "C-.") 'insert-arrow)

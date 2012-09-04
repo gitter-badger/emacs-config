@@ -80,6 +80,17 @@ kill all other visible buffers."
                   ((equal prefix '(16)) "%A, %d. %B %Y")))
          (system-time-locale "en_US"))
      (insert (format-time-string format))))
+
+(defun prelude-copy-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
+
 ;; ;; Use the text around point as a cue what it is that we want from the
 ;; ;; editor. Allowance has to be made for the case that point is at the
 ;; ;; edge of a buffer.
