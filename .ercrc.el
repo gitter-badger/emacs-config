@@ -59,7 +59,7 @@
 (erc-autojoin-mode t)
 (setq erc-autojoin-channels-alist
       '((".*a11y.org" "#epub")
-        (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails")
+        (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
         (".*w3.org" "#css" "#css-test" "#dnt" "#fx" "#webapps" "#html-wg" "#html-xml")))
 
 (defun djcb-erc-start-or-switch ()
