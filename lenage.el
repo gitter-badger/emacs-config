@@ -27,6 +27,6 @@
 (load "lenage/ruby-mode")
 (load "lenage/rails")
 (load "lenage/auto-complete")
-(load "lenage/emms")
+;; (load "lenage/emms")
 ;; (load "lenage/gnus")
 (vendor 'revbufs       'revbufs)

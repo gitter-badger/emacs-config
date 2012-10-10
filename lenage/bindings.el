@@ -31,6 +31,10 @@
 ;; Mac OS X conventions
 ;;(global-set-key (kbd "M-a") 'mark-whole-buffer) ; was backward-sentence.
 
+;; Don't use Alt+x, controller instead
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
 ;; Find matching parens
 (global-set-key (kbd "C-'") 'match-paren)
 
