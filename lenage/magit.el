@@ -1,4 +1,11 @@
 ;;; It's Magit! An Emacs mode for Git.
+;; Subtler highlightm
+
+;; (require 'magit-svn)
+;; (set-face-background 'magit-item-highlight "#121212")
+;; (set-face-foreground 'magit-diff-context "#666666")
+;; (set-face-foreground 'magit-diff-added "#00cc33")
+;; (set-face-foreground 'magit-diff-removed "#ff0000")
 
 (add-hook
  'magit-mode-hook

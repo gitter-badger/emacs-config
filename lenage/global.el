@@ -107,17 +107,12 @@
 (set-fringe-style 0)
 (tooltip-mode -1)
 (electric-pair-mode t)
-
 ;; Display time and data in status bar
 (setq display-time-24hr-format t)
 (display-time)
 
 ;; color-theme
-;; (load-theme 'theme-name t)
-
-;; RVM
-(rvm-use-default)
-(rvm-autodetect-ruby)
+(load-theme 'solarized-light t)
 
 ;; yasnippet
 (yas/load-directory (expand-file-name "snippets" "~/.emacs.d/"))
