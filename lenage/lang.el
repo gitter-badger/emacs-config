@@ -45,6 +45,6 @@
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; setup slime with quickliso slime-helper
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl --noinform --no-linedit")
+;; (setq inferior-lisp-program "sbcl --noinform --no-linedit")

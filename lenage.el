@@ -19,7 +19,6 @@
 (load "lenage/org")
 (load "lenage/zoom")
 (load "lenage/flymake")
-(load "lenage/mac")
 (load "lenage/server-mode")
 (load "lenage/private" 'noerror)
 (load "lenage/iswitchb")
