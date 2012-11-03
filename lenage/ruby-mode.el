@@ -2,6 +2,23 @@
 
 (defalias 'ri 'yari)
 (global-set-key (kbd "C-h r") 'ri)
+
+
+;; patches your # key to automatically expand to #{} when typed inside a double quoted string.
+(defun senny-ruby-interpolate ()
+  "In a double quoted string, interpolate."
+  (interactive)
+  (insert "#")
+  (when (and
+         (looking-back "\".*")
+         (looking-at ".*\""))
+    (insert "{}")
+    (backward-char 1)))
+
+(eval-after-load 'ruby-mode
+  '(progn
+     (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)))
+
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer()
    "Evaluate the buffer with ruby."
