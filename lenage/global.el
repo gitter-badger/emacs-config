@@ -104,8 +104,7 @@
 (delete-selection-mode t)
 (scroll-bar-mode 0)
 (tool-bar-mode -1)
-(unless (display-graphic-p) (menu-bar-mode -1))
-(set-fringe-style 0)
+(menu-bar-mode -1)
 (tooltip-mode -1)
 (electric-pair-mode t)
 ;; Display time and data in status bar
@@ -113,7 +112,7 @@
 (display-time)
 
 ;; color-theme
-(load-theme 'solarized-light t)
+(load-theme 'tango-dark t)
 
 ;; yasnippet
 (yas/load-directory (expand-file-name "snippets" "~/.emacs.d/"))

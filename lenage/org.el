@@ -6,9 +6,6 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-(setq org-agenda-files (list "~/org/work.org"
-                             "~/org/home.org"))
-
 (setq org-agenda-custom-commands
       '(("D" "Daliy Action List"
          ((agenda "" ((org-agenda-ndays 1 )

@@ -8,13 +8,6 @@
 ;; lua mode
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 
-;; yaml mode
-(require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-(add-hook 'yaml-mode-hook
-          '(lambda ()
-             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
-
 ;; CSS mode
 (defun all-css-modes() (css-mode) (rainbow-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
@@ -45,6 +38,6 @@
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; setup slime with quickliso slime-helper
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl --noinform --no-linedit")
+;; (setq inferior-lisp-program "sbcl --noinform --no-linedit")
