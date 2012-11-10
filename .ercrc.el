@@ -28,9 +28,6 @@
 (require 'erc-netsplit)
 (erc-netsplit-mode t)
 
-(require 'erc-spelling)
-(erc-spelling-mode 1)
-
 (erc-timestamp-mode t)
 (setq erc-timestamp-format "[%R]")
 
@@ -59,8 +56,7 @@
 (erc-autojoin-mode t)
 (setq erc-autojoin-channels-alist
       '((".*a11y.org" "#epub")
-        (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
-        (".*w3.org" "#css" "#css-test" "#dnt" "#fx" "#webapps" "#html-wg" "#html-xml")))
+        (".*freenode.net" "#raspberrypi")))
 
 (defun djcb-erc-start-or-switch ()
   "Connect to ERC, or switch to last active buffer"

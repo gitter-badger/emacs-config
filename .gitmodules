@@ -115,3 +115,6 @@
 [submodule "vendor/rhtml"]
 	path = vendor/rhtml
 	url = https://github.com/eschulte/rhtml.git
+[submodule "vendor/weibo"]
+	path = vendor/weibo
+	url = https://github.com/austin-----/weibo.emacs.git
