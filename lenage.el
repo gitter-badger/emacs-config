@@ -31,3 +31,7 @@
 ;; (load "lenage/emms")
 ;; (load "lenage/gnus")
 (vendor 'revbufs       'revbufs)
+
+;; emacs-weibo
+(vendor 'weibo)
+(setq weibo-display-image nil)

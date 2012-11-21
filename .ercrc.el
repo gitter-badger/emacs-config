@@ -28,8 +28,8 @@
 (require 'erc-netsplit)
 (erc-netsplit-mode t)
 
-(require 'erc-spelling)
-(erc-spelling-mode 1)
+;; (require 'erc-spelling)
+;; (erc-spelling-mode 1)
 
 (erc-timestamp-mode t)
 (setq erc-timestamp-format "[%R]")
@@ -60,7 +60,7 @@
 (setq erc-autojoin-channels-alist
       '((".*a11y.org" "#epub")
         ;; (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
-        (".*freenode.net" "#emacs" "#whatwg" "#rubyonrails" "archlinux" "#chromium-apps")
+        (".*freenode.net" "#emacs" "#rubyonrails" "#archlinux-cn" "#archlinux" "#chromium-apps")
         ))
 
 (defun djcb-erc-start-or-switch ()
