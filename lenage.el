@@ -28,7 +28,7 @@
 (load "lenage/rails")
 (load "lenage/auto-complete")
 (load "lenage/gist")
-(load "lenage/emms")
+;; (load "lenage/emms")
 (vendor 'revbufs       'revbufs)
 
 ;; emacs-weibo
