@@ -24,4 +24,4 @@
 (load "lenage/lang")
 (load "lenage/auto-complete")
 (vendor 'revbufs       'revbufs)
-(vendor 'weibo)
+;; (vendor 'weibo)
