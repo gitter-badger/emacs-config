@@ -115,3 +115,6 @@
 [submodule "vendor/rhtml"]
 	path = vendor/rhtml
 	url = https://github.com/eschulte/rhtml.git
+[submodule "vendor/lighthouse-mode"]
+	path = vendor/lighthouse-mode
+	url = https://github.com/fgeller/lighthouse-mode.git

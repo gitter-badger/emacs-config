@@ -28,9 +28,10 @@
 (load "lenage/rails")
 (load "lenage/auto-complete")
 (load "lenage/gist")
+(load "lenage/lighthouse")
 ;; (load "lenage/emms")
 (vendor 'revbufs       'revbufs)
 
 ;; emacs-weibo
 (vendor 'weibo)
-(setq weibo-display-image nil)
+;; (setq weibo-display-image nil)
