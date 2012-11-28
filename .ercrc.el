@@ -60,7 +60,7 @@
 (setq erc-autojoin-channels-alist
       '((".*a11y.org" "#epub")
         ;; (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
-        (".*freenode.net" "#emacs" "#rubyonrails" "#archlinux-cn" "#archlinux" "#chromium-apps")
+        (".*freenode.net" "#emacs" "#rubyonrails" "#archlinux")
         ))
 
 (defun djcb-erc-start-or-switch ()
