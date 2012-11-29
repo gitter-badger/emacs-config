@@ -60,3 +60,4 @@ secret.org
 .*~
 agent/*
 /.emms-history
+lenage/private.el
