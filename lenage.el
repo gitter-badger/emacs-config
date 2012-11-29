@@ -23,7 +23,7 @@
 (load "lenage/mac")
 (load "lenage/server-mode")
 (load "lenage/iswitchb")
-;; (load "lenage/yasnippet")
+(load "lenage/yasnippet")
 (load "lenage/lang")
 (load "lenage/ruby-mode")
 (load "lenage/rails")
