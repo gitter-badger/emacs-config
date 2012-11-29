@@ -1,3 +1,4 @@
 ;; yasnippet
 ;; (yas/load-directory (expand-file-name "snippets" "~/.emacs.d/"))
-(require 'yasnippet-bundle)
+(require 'yasnippet)
+;; (yas-global-mode 1)

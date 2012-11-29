@@ -13,7 +13,7 @@
       '(("original"    . "http://tromey.com/elpa/")
         ("gnu"         . "http://elpa.gnu.org/packages/")
         ("marmalade"   . "http://marmalade-repo.org/packages/")
-        ("melpa"       . "http://melpa.milkbox.net/")))
+        ("melpa"       . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
 ;; Use command as the meta key
