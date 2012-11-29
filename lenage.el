@@ -24,6 +24,7 @@
 (load "lenage/server-mode")
 (load "lenage/iswitchb")
 (load "lenage/yasnippet")
+(load "lenage/keyfreq")
 (load "lenage/lang")
 (load "lenage/ruby-mode")
 (load "lenage/rails")
