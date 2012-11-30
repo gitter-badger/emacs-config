@@ -43,6 +43,9 @@ var/*
 ## org stuff
 .org-id-locations
 
+## yasnippet stuff
+.yas-*-snippets.el
+
 ## ignore mail/gnus cruft for those who keep mail in this directory
 drafts
 Mail
