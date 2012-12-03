@@ -16,5 +16,6 @@
                 ("SICP video Lectures" . "ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/")
                 ("Qortex" . "qortex.net")
                 ("Qortex Dev" . "qortex.theplant-dev.com")
+                ("character code" . "character-code.com")
                 )
               webjump-sample-sites))

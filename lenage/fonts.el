@@ -10,7 +10,8 @@
 ;;      )
 
 (set-frame-font "Monaco-12")
-(set-fontset-font t 'han '("WenQuanYi Micro Hei Mono" . "unicode-bmp"))
+;; (set-fontset-font t 'han '("WenQuanYi Micro Hei Mono" . "unicode-bmp"))
+(set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
 
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)
