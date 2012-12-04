@@ -17,5 +17,7 @@
                 ("Qortex" . "qortex.net")
                 ("Qortex Dev" . "qortex.theplant-dev.com")
                 ("character code" . "character-code.com")
+                ("ppurl" . "ppurl.com")
+                ("ruby Regex" . "rubular.com")
                 )
               webjump-sample-sites))
