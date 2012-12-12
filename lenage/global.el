@@ -24,7 +24,6 @@
 (setq user-mail-address "lendage@gmail.com")
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
-;;
 
 (setq mac-allow-anti-aliasing t)
 ;; Highlight regions and add special behaviors to regions.
