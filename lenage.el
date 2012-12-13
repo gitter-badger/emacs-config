@@ -22,7 +22,7 @@
 (load "lenage/flymake")
 (load "lenage/mac")
 (load "lenage/server-mode")
-(load "lenage/auto-complete")
+;; (load "lenage/auto-complete")
 (load "lenage/iswitchb")
 (load "lenage/yasnippet")
 (load "lenage/keyfreq")
