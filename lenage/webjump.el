@@ -22,7 +22,7 @@
                 ("html5please" . "html5please.com")
                 ("ruby Regex" . "rubular.com")
                 ("favorite icon" . "converticon.com")
-                ("white house" . "meijuhot.com/tv/3374/1-4")
+                ("west wing" . "www.yyets.com/php/resource/10070")
                 ("teavana" . "www.teavana.com/")
                 )
               webjump-sample-sites))

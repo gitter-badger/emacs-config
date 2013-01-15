@@ -30,6 +30,7 @@ src/*
 themes/*
 url/*
 var/*
+emms/*
 
 ## exported and encrypted files
 *gpg
@@ -56,6 +57,7 @@ mail
 *.SCORE
 marks
 .session
+.mc-lists.el
 abbrev_defs
 scratch
 secret.org
