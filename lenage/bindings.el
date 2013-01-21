@@ -39,7 +39,7 @@
 (global-set-key (kbd "C-'") 'match-paren)
 
 ;; Copry current buffer file name to clipboard
-(global-set-key (kbd "C-c C-v") 'prelude-copy-file-name-to-clipboard)
+(global-set-key (kbd "C-c C-p") 'prelude-copy-file-name-to-clipboard)
 
 ;; Easy inserts
 (global-set-key (kbd "C-.") 'insert-arrow)

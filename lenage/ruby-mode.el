@@ -17,7 +17,9 @@
 
 (eval-after-load 'ruby-mode
   '(progn
-     (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)))
+     (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)
+     )
+  )
 
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer()
@@ -25,21 +27,16 @@
    (interactive)
    (shell-command-on-region (point-min) (point-max) "ruby"))
 
-;; FIXME: it should be available in next versions of ruby-mode.el
-(defun ruby-insert-end ()
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
-
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
             (local-set-key [(control c) (control e)] 'ruby-insert-end)
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
+            (electric-pair-mode 0)
             ))
 
+(add-hook 'ruby-mode-hook  (electric-pair-mode nil))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
