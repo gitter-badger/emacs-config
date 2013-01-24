@@ -16,3 +16,6 @@
 [submodule "vendor/revbufs"]
 	path = vendor/revbufs
 	url = https://github.com/emacsmirror/revbufs.git
+[submodule "vendor/js2-mode"]
+	path = vendor/js2-mode
+	url = https://github.com/mooz/js2-mode.git
