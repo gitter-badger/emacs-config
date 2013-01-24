@@ -30,7 +30,6 @@
 (load "lenage/ruby-mode")
 (load "lenage/rails")
 (load "lenage/gist")
-(load "lenage/lighthouse")
 
 ;; (load "lenage/emms")
 (vendor 'revbufs       'revbufs)
