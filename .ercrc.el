@@ -58,7 +58,8 @@
 ;; Autojoin
 (erc-autojoin-mode t)
 (setq erc-autojoin-channels-alist
-      '((".*a11y.org" "#epub")
+      '(("ci.theplant-dev.com" "#lacoste")
+        (".*a11y.org" "#epub")
         ;; (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
         (".*freenode.net" "#emacs" "#rubyonrails" "#archlinux")
         ))
