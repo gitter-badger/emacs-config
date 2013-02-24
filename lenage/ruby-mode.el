@@ -30,13 +30,11 @@
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
-            (local-set-key [(control c) (control e)] 'ruby-insert-end)
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
             (electric-pair-mode 0)
             ))
 
-(add-hook 'ruby-mode-hook  (electric-pair-mode nil))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))

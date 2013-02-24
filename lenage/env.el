@@ -16,3 +16,7 @@
 ;; setting smlng path
 (setq exec-path (cons "/usr/local/smlnj-110.75/bin" exec-path))
 (setenv "PATH" (concat "/usr/local/smlnj-110.75/bin:" (getenv "PATH")))
+
+;; Set Clojure lein path
+(setq exec-path (cons "~/bin" exec-path))
+(setenv "PATH" (concat "~/bin:" (getenv "PATH")))

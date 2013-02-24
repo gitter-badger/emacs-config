@@ -5,8 +5,30 @@
 (setq js2-bounce-indent-p t)
 (setq js2-consistent-level-indent-inner-bracket-p t)
 (setq js2-use-ast-for-indentation-p t)
+(setq-default js2-global-externs '("module" "require" "jQuery" "$" "_" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
+;; Use node as our repl
+(setq inferior-js-program-command "node")
 
-;; lua mode
+(setq inferior-js-mode-hook
+      (lambda ()
+        (ansi-color-for-comint-mode-on)
+        ;; Deal with some prompt nonsense
+        (add-to-list 'comint-preoutput-filter-functions
+                     (lambda (output)
+                       (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
+                                                 (replace-regexp-in-string ".*1G.*3G" "> " output))))))
+
+(eval-after-load 'js2-mode
+  '(progn
+     (define-key js2-mode-map (kbd "TAB") (lambda()
+                                            (interactive)
+                                            (let ((yas/fallback-behavior 'return-nil))
+                                              (unless (yas/expand)
+                                                (indent-for-tab-command)
+                                                (if (looking-back "^\s*")
+                                                    (back-to-indentation))))))))
+
+;;; lua mode
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 
 ;; yaml mode

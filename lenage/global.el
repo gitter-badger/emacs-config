@@ -106,6 +106,11 @@
 (setq display-time-24hr-format t)
 (display-time)
 
+;; auto-save mode on
+;; (setq auto-save-default t)
+;; (setq auto-save-interval 30)
+;; (setq auto-save-timeout 15)
+
 ;; color-theme
 (load-theme 'solarized-light t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme

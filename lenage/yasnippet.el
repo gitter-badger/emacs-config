@@ -8,9 +8,11 @@
                              yas/completing-prompt))
 (setq yas/root-directory '(
                            "~/.emacs.d/snippets"
-                           "~/.emacs.d/elpa/yasnippet-20130112.1823/snippets"
+                           "~/.emacs.d/elpa/yasnippet-20130218.2229/snippets"
                            "~/.emacs.d/vendor/yasnippets-rails/rails-snippets"
                            "~/.emacs.d/vendor/yasnippets-shoulda"))
+
+(setq yas/use-menu 'abbreviate)
 (yas/jit-load)
 
 ;; (defun shk-yas/helm-prompt (prompt choices &optional display-fn)
