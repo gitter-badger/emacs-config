@@ -9,8 +9,11 @@
 ;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
 ;;      )
 
-(set-frame-font "Monaco-10")
-(set-fontset-font t 'han '("WenQuanYi Micro Hei Mono" . "unicode-bmp"))
+(set-frame-font "Monaco-12")
+(set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
+(set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
+(set-fontset-font t 'japanese-jisx0208 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
+;; (set-fontset-font t 'japanese-jisx0212 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
 
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)

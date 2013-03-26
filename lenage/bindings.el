@@ -39,7 +39,7 @@
 (global-set-key (kbd "C-'") 'match-paren)
 
 ;; Copry current buffer file name to clipboard
-(global-set-key (kbd "C-c C-v") 'prelude-copy-file-name-to-clipboard)
+(global-set-key (kbd "C-c C-p") 'prelude-copy-file-name-to-clipboard)
 
 ;; Easy inserts
 (global-set-key (kbd "C-.") 'insert-arrow)
@@ -98,3 +98,9 @@
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+;; multiple-cursor
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)

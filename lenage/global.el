@@ -24,7 +24,6 @@
 (setq user-mail-address "lendage@gmail.com")
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
-;;
 
 (setq mac-allow-anti-aliasing t)
 ;; Highlight regions and add special behaviors to regions.
@@ -101,9 +100,19 @@
 (menu-bar-mode -1)
 (tooltip-mode -1)
 (electric-pair-mode t)
+(icomplete-mode 1)
 ;; Display time and data in status bar
 (setq display-time-24hr-format t)
 (display-time)
 
+;; auto-save mode on
+;; (setq auto-save-default t)
+;; (setq auto-save-interval 30)
+;; (setq auto-save-timeout 15)
+
 ;; color-theme
-(load-theme 'tango-dark t)
+(load-theme 'solarized-light t)
+;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme
+;; (load-theme 'zen-and-art t)             ; nice dark theme
+;; (load-theme 'pastels-on-dark t)
+;; (load-theme 'subatomic t)
