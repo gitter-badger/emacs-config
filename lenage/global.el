@@ -85,7 +85,7 @@
 ;; tab width
 (setq-default tab-width 2)
 (setq js-indent-level 2)
-(setq c-basic-offset 4)
+(setq c-basic-offset 2)
 (setq css-indent-offset 2)
 (setq sh-basic-offset 2)
 (setq-default indent-tabs-mode nil)
@@ -101,10 +101,13 @@
 (set-fringe-style 0)
 (tooltip-mode -1)
 (electric-pair-mode t)
-(icomplete-mode 1)
+(icomplete-mode 1)u
 ;; Display time and data in status bar
 (setq display-time-24hr-format t)
 (display-time)
+
+;; Global undo tree
+(global-undo-tree-mode)
 
 ;; auto-save mode on
 ;; (setq auto-save-default t)

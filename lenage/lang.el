@@ -28,6 +28,15 @@
                                                 (if (looking-back "^\s*")
                                                     (back-to-indentation))))))))
 
+(vendor 'coffee-mode)
+;;; coffee mode
+(defun coffee-custom ()
+  "coffee-mode-hook"
+  ;; Emacs key binding
+  (define-key coffee-mode-map (kbd "C-c c-r") 'coffee-compile-buffer))
+
+(add-hook 'coffee-mode-hook '(lambda () (coffee-custom)))
+
 ;;; lua mode
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 
@@ -63,6 +72,7 @@
 (add-hook 'haskell-mode-hook
           (lambda()
             (setq tab-width 4)))
+
 
 ;; Auto-start zencoding-mode on any markup modes
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)

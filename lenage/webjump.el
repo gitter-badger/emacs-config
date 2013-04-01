@@ -24,5 +24,6 @@
                 ("favorite icon" . "converticon.com")
                 ("west wing" . "www.yyets.com/php/resource/10070")
                 ("teavana" . "www.teavana.com/")
+                ("wooyun" . "http://www.wooyun.org/index.php")
                 )
               webjump-sample-sites))
