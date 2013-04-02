@@ -101,7 +101,7 @@
 (set-fringe-style 0)
 (tooltip-mode -1)
 (electric-pair-mode t)
-(icomplete-mode 1)u
+(icomplete-mode 1)
 ;; Display time and data in status bar
 (setq display-time-24hr-format t)
 (display-time)

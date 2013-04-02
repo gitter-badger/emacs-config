@@ -71,6 +71,7 @@
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-p") 'find-file-at-point)
+(global-set-key (kbd "C-x f") 'find-file-in-project)
 
 ;; window switching
 (windmove-default-keybindings) ;; Shift+direction
