@@ -16,6 +16,33 @@
         ("melpa"       . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
+;; Fetch the list of packages available
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(setq package-list
+      '(
+        ;; Language modes
+        ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
+                  lua-mode sass-mode css-mode scss-mode slim-mode
+
+
+                  ;; Yasnippet
+                  yari yas-jit yasnippet-bundle
+
+                  ;; Themes
+                  solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
+
+                  ;; Tools
+                  magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
+                  find-file-in-project rinari undo-tree rainbow-mode
+                  ))
+
+;; install the missing packages
+(dolist (package package-list)
+  (when (not (package-installed-p package))
+    (package-install package)))
+
 ;; Use command as the meta key
 ;; (setq ns-command-modifier  'meta)
 

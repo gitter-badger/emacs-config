@@ -18,11 +18,9 @@
 (eval-after-load 'ruby-mode
   '(progn
      (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)
+     (define-key ruby-mode-map (kbd "TAB") nil)
      )
   )
-
-;;
-(define-key ruby-mode-map (kbd "TAB") nil)
 
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer()
