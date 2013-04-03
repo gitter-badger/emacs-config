@@ -34,6 +34,7 @@
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
             (electric-pair-mode 0)
+            (subword-mode +1)
             ))
 
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))

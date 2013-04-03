@@ -105,3 +105,6 @@
 ;; move current line up or down
 (global-set-key [(meta shift up)]  'move-line-up)
 (global-set-key [(meta shift down)]  'move-line-down)
+
+;; ;; Kill Other Buffers
+(global-set-key (kbd "C-c k") 'kill-other-buffers)

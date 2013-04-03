@@ -91,7 +91,7 @@ kill all other visible buffers."
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
-
+;; ;; Move current line up or down
 (defun move-line-up ()
   "Move up the current line."
   (interactive)
@@ -106,6 +106,14 @@ kill all other visible buffers."
   (transpose-lines 1)
   (forward-line -1)
   (indent-according-to-mode))
+
+(defun kill-other-buffers ()
+  "Kill all buffers but the current one.
+Don't mess with special buffers."
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
+      (kill-buffer buffer))))
 
 ;; ;; Use the text around point as a cue what it is that we want from the
 ;; ;; editor. Allowance has to be made for the case that point is at the
