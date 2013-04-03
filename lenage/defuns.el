@@ -91,6 +91,22 @@ kill all other visible buffers."
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
+
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
 ;; ;; Use the text around point as a cue what it is that we want from the
 ;; ;; editor. Allowance has to be made for the case that point is at the
 ;; ;; edge of a buffer.
