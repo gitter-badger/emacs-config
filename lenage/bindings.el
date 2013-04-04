@@ -108,3 +108,15 @@
 
 ;; ;; Kill Other Buffers
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
+
+;; ;; Google
+(global-set-key (kbd "C-c g") 'google)
+
+;; ;; Indent Region or Buffer
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+;; ;; open with
+(global-set-key (kbd "C-c o") 'open-with)
+
+;; ;; smart open line
+(global-set-key [(shift return)] 'smart-open-line)
