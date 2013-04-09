@@ -19,6 +19,7 @@
   '(progn
      (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)
      (define-key ruby-mode-map (kbd "TAB") nil)
+     (define-key ruby-mode-map (kbd "C-j") nil)
      )
   )
 
