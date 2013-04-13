@@ -1,4 +1,4 @@
-;; ;; ; Personal abbreviations
+;; ; Personal abbreviations
 (define-abbrev-table 'global-abbrev-table '(
 
     ;; math/unicode symbols
@@ -7,7 +7,7 @@
     ("8inf" "∞")
     ("8luv" "♥")
     ("8smly" "☺")
-    ("8l" "λ")
+    ("8la" "λ")
     ("8rt" "√")
     ("8->" "→")
     ("8>=" "≥")

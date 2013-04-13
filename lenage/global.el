@@ -63,6 +63,7 @@
 
 ;;; Highlight current line
 (global-hl-line-mode 1)
+(global-diff-hl-mode 1)
 
 ;; Add newline at end of files
 (setq require-final-newline t)
@@ -125,7 +126,7 @@
 (scroll-bar-mode 0)
 (tool-bar-mode -1)
 (unless (display-graphic-p) (menu-bar-mode -1))
-(set-fringe-style 0)
+(set-fringe-style 4)
 (tooltip-mode -1)
 (electric-pair-mode t)
 (icomplete-mode 1)
