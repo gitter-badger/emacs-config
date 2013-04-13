@@ -1,7 +1,27 @@
 (require 'mu4e)
 
-;; default
+;; use mu4e to sending email
+(setq mail-user-agent 'mu4e-user-agent)
+(setq mu4e-attachment-dir  "~/Downloads")
+
+;; default mail folder
 (setq mu4e-maildir (expand-file-name "~/Maildir"))
+
+;; Viewing Rich-text email
+(setq mu4e-html2text-command "html2text -utf8 -width 72")
+
+;; Viewing images inline
+(setq mu4e-view-show-images t)
+(when (fboundp 'imagemagick-register-types)
+  (imagemagick-register-types))
+
+(add-to-list 'mu4e-view-actions
+            '("ViewInBrowser" . mu4e-action-view-in-browser) t)
+
+;; toggle between including/not-including with W.
+(setq mu4e-headers-include-related t)
+;; ;; toggle between skipping/not-skipping with V.
+(setq mu4e-headers-skip-duplicates t)
 
 (setq mu4e-drafts-folder "/[Gmail].Drafts")
 (setq mu4e-sent-folder   "/[Gmail].Sent Mail")
@@ -22,14 +42,13 @@
 (setq mu4e-get-mail-command "offlineimap")
 
 ;; something about ourselves
-;; I don't use a signature...
 (setq
  user-mail-address "lendage@gmail.com"
  user-full-name  "Yuan He"
- ;; message-signature
- ;;  (concat
- ;;    "Foo X. Bar\n"
- ;;    "http://www.example.com\n")
+ message-signature
+  (concat
+    "Yuan Hu\n"
+    "http://blog.lenage.com\n")
 )
 
 ;; sending mail -- replace USERNAME with your gmail username
@@ -48,3 +67,12 @@
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
       smtpmail-debug-info t)
+
+ ;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+;; hooks
+(defun lenage-mu4e-view-mode-hook()
+  (interactive)
+  (mu4e-view-toggle-hide-cited))
+
+(add-hook 'mu4e-view-mode-hook 'lenage-mu4e-view-mode-hook)
