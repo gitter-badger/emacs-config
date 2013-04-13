@@ -39,6 +39,7 @@
 (vendor 'weibo)
 (setq weibo-display-image nil)
 
+(vendor 'mu4e)
 (vendor 'auto-complete)
 ;; private setting
 (load "lenage/private" 'noerror)
