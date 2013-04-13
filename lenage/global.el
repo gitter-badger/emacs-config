@@ -135,12 +135,14 @@
 (display-time)
 
 ;; Global undo tree
+;; C-x u show undotree visualize
 (global-undo-tree-mode)
 
-;; auto-save mode on
-;; (setq auto-save-default t)
-;; (setq auto-save-interval 30)
-;; (setq auto-save-timeout 15)
+;; ;; Global auto-revert mode when file changes
+(global-auto-revert-mode 1)
+
+;;;; auto-save mode on
+(setq auto-save-default t)
 
 ;; color-theme
 (load-theme 'solarized-light t)
