@@ -73,6 +73,7 @@
 ;; hooks
 (defun lenage-mu4e-view-mode-hook()
   (interactive)
-  (mu4e-view-toggle-hide-cited))
+  ;; (mu4e-view-toggle-hide-cited)
+  )
 
 (add-hook 'mu4e-view-mode-hook 'lenage-mu4e-view-mode-hook)
