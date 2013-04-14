@@ -3,10 +3,8 @@
 ;; use mu4e to sending email
 (setq mail-user-agent 'mu4e-user-agent)
 (setq mu4e-attachment-dir  "~/Downloads")
-
 ;; default mail folder
 (setq mu4e-maildir (expand-file-name "~/Maildir"))
-
 ;; Viewing Rich-text email
 (setq mu4e-html2text-command "html2text -utf8 -width 72")
 
@@ -23,40 +21,65 @@
 ;; ;; toggle between skipping/not-skipping with V.
 (setq mu4e-headers-skip-duplicates t)
 
-(setq mu4e-drafts-folder "/[Gmail].Drafts")
-(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
-(setq mu4e-trash-folder  "/[Gmail].Trash")
+;; Default account
+(setq mu4e-sent-folder "/Personal/[Gmail].Sent Mail"
+      mu4e-drafts-folder "/Personal/[Gmail].Drafts"
+      mu4e-trash-folder  "/Personal/[Gmail].Trash")
 
+(defvar lenage-mu4e-account-alist
+  '(("Personal"
+     (mu4e-sent-folder "/Personal/[Gmail].Sent Mail")
+     (mu4e-drafts-folder "/Personal/[Gmail].Drafts")
+     (mu4e-trash-folder  "/Personal/[Gmail].Trash")
+     (user-mail-address "lendage@gmail.com")
+     (user-full-name  "Yuan He")
+     (message-signature (concat "Yuan Hu\n" "http://blog.lenage.com\n")))
+    ("Work"
+     (mu4e-sent-folder "/Work/[Gmail].Sent Mail")
+     (mu4e-drafts-folder "/Work/[Gmail].Drafts")
+     (mu4e-trash-folder  "/Work/[Gmail].Trash")
+     (user-mail-address "lendage@theplant.jp")
+     (message-signature (concat "Yuan Hu\n" "ThePlant.co.,Ltd.")))))
+
+(defun lenage-mu4e-set-account ()
+  "Set the account for composing a message."
+  (let* ((account
+          (if mu4e-compose-parent-message
+              (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
+                (string-match "/\\(.*?\\)/" maildir)
+                (match-string 1 maildir))
+            (completing-read (format "Compose with account: (%s) "
+                                     (mapconcat #'(lambda (var) (car var)) lenage-mu4e-account-alist "/"))
+                             (mapcar #'(lambda (var) (car var)) lenage-mu4e-account-alist)
+                             nil t nil nil (caar lenage-mu4e-account-alist))))
+         (account-vars (cdr (assoc account lenage-mu4e-account-alist))))
+    (if account-vars
+        (mapc #'(lambda (var)
+                  (set (car var) (cadr var)))
+              account-vars)
+      (error "No email account found"))))
+
+ (add-hook 'mu4e-compose-pre-hook 'lenage-mu4e-set-account)
 ;; don't save message to Sent Messages, GMail/IMAP will take care of this
 (setq mu4e-sent-messages-behavior 'delete)
 
 ;; setup some handy shortcuts
 (setq mu4e-maildir-shortcuts
-      '(("/INBOX"             . ?i)
-        ("/[Gmail].Sent Mail" . ?s)
-        ("/[Gmail].Trash"     . ?t)
-        ("/Follow up"         . ?f)
+      '(("/Work/INBOX"             . ?i)
+        ("/Work/[Gmail].Sent Mail" . ?s)
+        ("/Work/[Gmail].Trash"     . ?t)
+        ("/Work/[Gmail].Drafts"    . ?d)
+        ("/Work/Follow up"         . ?f)
         ))
 
 ;; allow for updating mail using 'U' in the main view:
 (setq mu4e-get-mail-command "offlineimap")
-
-;; something about ourselves
-(setq
- user-mail-address "lendage@gmail.com"
- user-full-name  "Yuan He"
- message-signature
-  (concat
-    "Yuan Hu\n"
-    "http://blog.lenage.com\n")
-)
 
 ;; sending mail -- replace USERNAME with your gmail username
 ;; also, make sure the gnutls command line utils are installed
 ;; package 'gnutls-bin' in Debian/Ubuntu, 'gnutls' in Archlinux.
 
 (require 'smtpmail)
-
 (setq message-send-mail-function 'smtpmail-send-it
       starttls-use-gnutls t
       smtpmail-starttls-credentials
@@ -77,3 +100,10 @@
   )
 
 (add-hook 'mu4e-view-mode-hook 'lenage-mu4e-view-mode-hook)
+
+;; Main View
+
+(add-to-list 'mu4e-bookmarks
+             '("maildir:/Personal/INBOX OR maildir:/Work/INBOX flag:unread"   "Today's news"   ?n)
+             '("maildir:/Work/Llighthouse"   "Work Lighthouse"   ?h)
+             )
