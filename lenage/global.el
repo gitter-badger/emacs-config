@@ -130,9 +130,10 @@
 (tooltip-mode -1)
 (electric-pair-mode t)
 (icomplete-mode 1)
-;; Display time and data in status bar
+;; Display time and date in status bar
 (setq display-time-24hr-format t)
-(display-time)
+(setq display-time-mode 1)
+(setq size-indication-mode 1)
 
 ;; Global undo tree
 ;; C-x u show undotree visualize
@@ -167,3 +168,7 @@
 (require 'todotxt)
 (setq todotxt-file "~/.todo/todo.txt")
 (global-set-key (kbd "C-x t") 'todotxt)
+
+;; powerline
+;; (require 'powerline)
+;; (powerline-default-theme)
