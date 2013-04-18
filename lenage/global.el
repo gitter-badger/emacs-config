@@ -35,7 +35,7 @@
 
                   ;; Tools
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
-                  find-file-in-project rinari undo-tree rainbow-mode
+                  find-file-in-project rinari undo-tree rainbow-mode todotxt
                   ))
 
 ;; install the missing packages
@@ -145,7 +145,8 @@
 (setq auto-save-default t)
 
 ;; color-theme
-(load-theme 'solarized-light t)
+;; (load-theme 'solarized-light t)
+(load-theme 'misterioso t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme
 ;; (load-theme 'zen-and-art t)             ; nice dark theme
 ;; (load-theme 'pastels-on-dark t)
@@ -161,3 +162,8 @@
                                          try-expand-list try-expand-line
                                          try-complete-lisp-symbol-partially
                                          try-complete-lisp-symbol))
+
+;;  todotxt config
+(require 'todotxt)
+(setq todotxt-file "~/.todo/todo.txt")
+(global-set-key (kbd "C-x t") 'todotxt)

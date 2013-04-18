@@ -11,7 +11,6 @@ ede-projects.el
 loaddefs.el*
 auto-save-list
 places
-custom.el
 .svn
 .DS_Store
 tramp

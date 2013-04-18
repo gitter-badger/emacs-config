@@ -102,8 +102,5 @@
 (add-hook 'mu4e-view-mode-hook 'lenage-mu4e-view-mode-hook)
 
 ;; Main View
-
-(add-to-list 'mu4e-bookmarks
-             '("maildir:/Personal/INBOX OR maildir:/Work/INBOX flag:unread"   "Today's news"   ?n)
-             '("maildir:/Work/Llighthouse"   "Work Lighthouse"   ?h)
-             )
+(add-to-list 'mu4e-bookmarks '("maildir:/Personal/INBOX OR maildir:/Work/INBOX flag:unread"   "Today's news"   ?n))
+(add-to-list 'mu4e-bookmarks '("maildir:/Work/Llighthouse"   "Work Lighthouse"   ?h))

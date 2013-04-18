@@ -1,5 +1,6 @@
 ;;; Rails
 
+
 (defalias 'rake 'rinari-rake)
 
 ;; ;; rhtml-mode
@@ -14,6 +15,12 @@
 ;; ;; ;; map .html.erb extension
 (add-to-list 'auto-mode-alist '("\\.smartphone\\.erb$"  . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.mobile\\.erb$"  . rhtml-mode))
+
+;; ;;  find-file-in-project
+;; (eval-after-load 'ruby-mode
+;;   '(progn
+;;      (add-to-list 'ffip-patterns "*.css" "*.erb")
+;;     )
 
 ;; (define-key rinari-minor-mode-map (kbd "C-c t") 'rinari-find-test)
 ;; (define-key rinari-minor-mode-map (kbd "C-c r") 'rinari-find-rspec)
