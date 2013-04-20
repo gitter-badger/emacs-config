@@ -31,6 +31,8 @@
 (load "lenage/rails")
 (load "lenage/gist")
 (load "lenage/abbrev")
+(load "lenage/misc")
+(load "lenage/find-file-in-project")
 
 ;; (load "lenage/emms")
 (vendor 'revbufs       'revbufs)

@@ -79,7 +79,8 @@
 (global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
 ;; Indentation help
-(global-set-key (kbd "C-x j") 'join-line)
+(global-set-key (kbd "M-j") 'join-line)
+(global-set-key (kbd "C-j") 'indent-new-comment-line)
 
 ;; Mark-multiple and friends
 (defun duplicate-line ()

@@ -32,7 +32,7 @@
                   ;; Tools
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
-                  diff-hl
+                  diff-hl expand-region diminish
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq
                   ;; auto-complete dependenes
@@ -48,7 +48,6 @@
 ;; (setq ns-command-modifier  'meta)
 
 ;; Don't show the startup screen
-(setq inhibit-startup-message t)
 (setq user-mail-address "lendage@gmail.com")
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -124,11 +123,8 @@
 (setq redisplay-dont-pause t)
 
 (delete-selection-mode t)
-(scroll-bar-mode 0)
-(tool-bar-mode -1)
-(unless (display-graphic-p) (menu-bar-mode -1))
 (set-fringe-style 4)
-(tooltip-mode -1)
+(tooltip-mode 1)
 (electric-pair-mode t)
 (icomplete-mode 1)
 ;; Display time and date in status bar
@@ -174,6 +170,12 @@
 ;; (require 'powerline)
 ;; (powerline-default-theme)
 
+;; Tea Time
 (require 'tea-time)
 (setq tea-time-sound "~/Music/notifications/Shots-letsgo.m4a")
 (setq tea-time-sound-command "afplay %s")
+
+;; Diminish
+(require 'diminish)
+(diminish 'undo-tree-mode)
+(diminish 'yas/minor-mode)

@@ -31,5 +31,10 @@
                 ("Plos" . "http://www.plos.org/")
                 ("MindHacks" . "http://mindhacks.com/")
                 ("FlowingData" . "http://flowingdata.com/")
+                ("Robot Maker" . "http://www.thingiverse.com/")
+
+                ;; Emacs
+                ("Emacs.d" . "http://whattheemacsd.com/")
+                ("Emacs Redux" . "http://emacsredux.com/")
                 )
               webjump-sample-sites))
