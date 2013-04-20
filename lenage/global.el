@@ -25,17 +25,18 @@
         ;; Language modes
         ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
                   lua-mode sass-mode css-mode scss-mode slim-mode
-
-
                   ;; Yasnippet
-                  yari yas-jit yasnippet-bundle
-
+                  yasnippet yari yas-jit yasnippet-bundle
                   ;; Themes
                   solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
-
                   ;; Tools
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
+                  diff-hl
+                  ;; Fun with Emacs
+                  nyan-mode tea-time keyfreq
+                  ;; auto-complete dependenes
+                  popup
                   ))
 
 ;; install the missing packages
@@ -172,3 +173,7 @@
 ;; powerline
 ;; (require 'powerline)
 ;; (powerline-default-theme)
+
+(require 'tea-time)
+(setq tea-time-sound "~/Music/notifications/Shots-letsgo.m4a")
+(setq tea-time-sound-command "afplay %s")
