@@ -1,10 +1,12 @@
 (require 'emms-setup)
+(require 'emms-player-mpd)
 (emms-devel)
 (emms-default-players)
 
 ;; setup mpd
 (setq emms-player-mpd-server-name "localhost")
 (setq emms-player-mpd-server-port "6600")
+(setq emms-player-mpd-music-directory "~/Music/")
 (add-to-list 'emms-info-functions 'emms-info-mpd)
 (add-to-list 'emms-player-list 'emms-player-mpd)
 
@@ -28,7 +30,7 @@
 (setq emms-player-next-function 'emms-next)
 (setq emms-repeat-playlist t)
 ;; Disable mode-line
-(emms-mode-line-disable)
+;; (emms-mode-line-disable)
 ;; Don't display songs times info
 (setq emms-playing-time-display-format "")
 ;; 设定更快和灵活的文件目录查找模式

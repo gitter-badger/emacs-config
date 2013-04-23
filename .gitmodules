@@ -22,3 +22,9 @@
 [submodule "vendor/auto-complete"]
 	path = vendor/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git
+[submodule "vendor/bingapiel"]
+	path = vendor/bingapiel
+	url = https://github.com/coordinate/bingapiel.git
+[submodule "vendor/bing-api"]
+	path = vendor/bing-api
+	url = https://github.com/coordinate/bingapiel.git
