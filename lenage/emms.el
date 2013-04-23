@@ -80,6 +80,7 @@
 (global-set-key (kbd "C-c e m") 'emms-playlist-mode-go)
 
 (global-set-key (kbd "C-c e t") 'emms-play-directory-tree)
+(global-set-key (kbd "C-c e c") 'emms-player-mpd-connect)
 (global-set-key (kbd "C-c e x") 'emms-start)
 (global-set-key (kbd "C-c e v") 'emms-stop)
 (global-set-key (kbd "C-c e n") 'emms-next)
