@@ -30,7 +30,7 @@
 (setq emms-player-next-function 'emms-next)
 (setq emms-repeat-playlist t)
 ;; Disable mode-line
-;; (emms-mode-line-disable)
+(emms-mode-line-disable)
 ;; Don't display songs times info
 (setq emms-playing-time-display-format "")
 ;; 设定更快和灵活的文件目录查找模式

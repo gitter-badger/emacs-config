@@ -36,6 +36,7 @@
 (load "lenage/bing-api")
 (load "lenage/emms")
 
+(vendor 'org-mouse)
 (vendor 'revbufs       'revbufs)
 ;; emacs-weibo
 (vendor 'weibo)

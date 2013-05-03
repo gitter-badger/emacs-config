@@ -6,7 +6,7 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-(setq org-agenda-files (list "~/org/work.org"
+(setq org-agenda-files (list "~/org/works/lacoste.org"
                              "~/org/home.org"))
 
 (setq org-agenda-custom-commands
@@ -18,6 +18,8 @@
                       )
                       )))))
 
+(setq org-todo-keywords
+      '((sequence "TODO" "OPEN" "COMMITTED" "PENDING_REVIEW" "|" "DONE" "DELEGATED" "PENDING_REPLY")))
 ;; (global-set-key (kbd "C-c r") 'remember)
 ;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
 ;; (setq org-remember-templates

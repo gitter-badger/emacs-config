@@ -12,7 +12,7 @@
  '(fci-rule-color "#073642")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-tail-colors (quote (("#073642" . 0) ("#546E00" . 20) ("#00736F" . 30) ("#00629D" . 50) ("#7B6000" . 60) ("#8B2C02" . 70) ("#93115C" . 85) ("#073642" . 100))))
- '(org-agenda-files (quote ("~/org/work.org" "~/org/home.org")))
+ '(org-agenda-files (quote ("~/org/works/lacoste.org" "~/org/home.org")))
  '(safe-local-variable-values (quote ((encoding . utf-8) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby"))))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "imap.gmail.com")
