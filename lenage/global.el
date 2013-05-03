@@ -111,7 +111,7 @@
 ;; (setq auto-save-timeout 15)
 
 ;; color-theme
-(load-theme 'solarized-light t)
+;; (load-theme 'solarized-light t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme
 ;; (load-theme 'zen-and-art t)             ; nice dark theme
 ;; (load-theme 'pastels-on-dark t)
