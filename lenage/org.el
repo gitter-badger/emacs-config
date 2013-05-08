@@ -10,19 +10,15 @@
                              "~/org/home.org"))
 
 (setq org-agenda-custom-commands
-      '(("D" "Daliy Action List"
-         ((agenda "" ((org-agenda-ndays 1 )
-                      (org-agenda-sorting-strategy '(time-up priority-down tag-up))
-                      ;; (org-deadline-warning-days 0)
-                      ;; (org-agenda-todo-keyword-format "[ ]"))
-                      )
-                      )))))
+      '(("D" "Daily Action List"
+         (
+          (agenda "" ((org-agenda-ndays 1)
+                      (org-agenda-sorting-strategy
+                       (quote ((agenda time-up priority-down tag-up) )))
+                      (org-deadline-warning-days 0)
+                      ))))))
+
+
 
 (setq org-todo-keywords
       '((sequence "TODO" "OPEN" "COMMITTED" "PENDING_REVIEW" "|" "DONE" "DELEGATED" "PENDING_REPLY")))
-;; (global-set-key (kbd "C-c r") 'remember)
-;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
-;; (setq org-remember-templates
-;;       '((?n "* %U %?" "~/org/inbox.org")))
-;; (setq remember-annotation-functions '(org-remember-annotation))
-;; (setq remember-handler-functions '(org-remember-handler))

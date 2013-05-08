@@ -28,7 +28,7 @@
                   ;; Yasnippet
                   yasnippet yari yas-jit yasnippet-bundle
                   ;; Themes
-                  solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
+                  ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
                   ;; Tools
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt

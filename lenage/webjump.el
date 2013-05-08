@@ -36,5 +36,12 @@
                 ;; Emacs
                 ("Emacs.d" . "http://whattheemacsd.com/")
                 ("Emacs Redux" . "http://emacsredux.com/")
+
+                ;; Open Hardware
+                ("fritzing" . "http://fritzing.org/projects/")
+                ;; User-created parts for fritzing: https://code.google.com/p/fritzing/issues/detail?id=875
+                ;;
+                ;;CSS
+                ("BootCss" . "http://www.bootcss.com/")
                 )
               webjump-sample-sites))
