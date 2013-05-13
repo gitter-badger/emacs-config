@@ -43,5 +43,11 @@
                 ;;
                 ;;CSS
                 ("BootCss" . "http://www.bootcss.com/")
+
+                ;; Rails conf
+                ("rails conf" . "http://www.josephjaber.com/articles/railsconf-2013-talks")
+
+                ;; OpenClassroom
+                ("openclassroom" . "http://openclassroom.stanford.edu/MainFolder/HomePage.php")
                 )
               webjump-sample-sites))

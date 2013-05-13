@@ -32,7 +32,7 @@
                   ;; Tools
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
-                  diff-hl expand-region diminish
+                  diff-hl expand-region diminish dash-at-point
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq
                   ;; auto-complete dependenes

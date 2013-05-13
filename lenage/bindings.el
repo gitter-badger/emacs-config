@@ -121,3 +121,6 @@
 
 ;; ;; smart open line
 (global-set-key [(shift return)] 'smart-open-line)
+
+;; ;; dash search at point
+(global-set-key (kbd "C-c d") 'dash-at-point)
