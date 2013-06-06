@@ -13,7 +13,8 @@
       '(("original"    . "http://tromey.com/elpa/")
         ("gnu"         . "http://elpa.gnu.org/packages/")
         ("marmalade"   . "http://marmalade-repo.org/packages/")
-        ("melpa"       . "http://melpa.milkbox.net/packages/")))
+        ("melpa"       . "http://melpa.milkbox.net/packages/")
+        ))
 (package-initialize)
 
 ;; Fetch the list of packages available
@@ -161,6 +162,13 @@
                                          try-complete-lisp-symbol-partially
                                          try-complete-lisp-symbol))
 
+;; Highlight Lines That Exceed a Certain Length Limit
+;; (require 'whitespace)
+;; (setq whitespace-line-column 80) ;; limit line length
+;; (setq whitespace-style '(face lines-tail))
+;; (add-hook 'prog-mode-hook 'whitespace-mode)
+;; (global-whitespace-mode +1)
+
 ;;  todotxt config
 (require 'todotxt)
 (setq todotxt-file "~/.todo/todo.txt")
@@ -179,3 +187,5 @@
 (require 'diminish)
 (diminish 'undo-tree-mode)
 (diminish 'yas/minor-mode)
+
+(setq tramp-shell-prompt-pattern "^[^$>\n]*[#$%>] *\\(\[[0-9;]*[a-zA-Z] *\\)*")

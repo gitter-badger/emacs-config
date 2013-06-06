@@ -49,5 +49,9 @@
 
                 ;; OpenClassroom
                 ("openclassroom" . "http://openclassroom.stanford.edu/MainFolder/HomePage.php")
+                ("bigicheatsheet" . "http://bigocheatsheet.com/#searching")
+
+                ;; Game Dev
+                ("Red Blob Games" . "http://www.redblobgames.com/")
                 )
               webjump-sample-sites))

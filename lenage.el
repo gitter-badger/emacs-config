@@ -17,7 +17,7 @@
 (load "lenage/dired")
 (load "lenage/recentf")
 (load "lenage/rectangle")
-(load "lenage/org")
+(load "lenage/org-mode")
 (load "lenage/zoom")
 (load "lenage/flymake")
 (load "lenage/mac")
@@ -42,7 +42,6 @@
 (vendor 'weibo)
 (setq weibo-display-image nil)
 
-(vendor 'mu4e)
 (vendor 'auto-complete)
 ;; private setting
 (load "lenage/private" 'noerror)
