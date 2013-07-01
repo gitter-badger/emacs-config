@@ -61,7 +61,7 @@
       '(("ci.theplant-dev.com" "#lacoste")
         (".*a11y.org" "#epub")
         ;; (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
-        (".*freenode.net" "#emacs" "#rubyonrails" "#archlinux")
+        (".*freenode.net" "#emacs" "#rubyonrails" "#ubuntu-cn")
         ))
 
 (defun djcb-erc-start-or-switch ()

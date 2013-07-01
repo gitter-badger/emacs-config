@@ -7,6 +7,7 @@
 (require 'recentf)
 (require 'flymake)
 
+
 ;; set packages
 (require 'package)
 (setq package-archives
@@ -27,7 +28,7 @@
         ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
                   lua-mode sass-mode css-mode scss-mode slim-mode
                   ;; Yasnippet
-                  yasnippet yari yas-jit yasnippet-bundle
+                  yasnippet yari yas-jit yasnippet-bundle rfringe
                   ;; Themes
                   ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
                   ;; Tools
@@ -188,4 +189,7 @@
 (diminish 'undo-tree-mode)
 (diminish 'yas/minor-mode)
 
-(setq tramp-shell-prompt-pattern "^[^$>\n]*[#$%>] *\\(\[[0-9;]*[a-zA-Z] *\\)*")
+(custom-set-variables '(tramp-verbose 0))
+(setq gnus-select-method '(nntp "news.gwene.org"))
+
+(require 'rfringe)

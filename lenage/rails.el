@@ -16,12 +16,12 @@
 (add-to-list 'auto-mode-alist '("\\.smartphone\\.erb$"  . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.mobile\\.erb$"  . rhtml-mode))
 
-(add-hook 'rinari-minor-mode-hook
-          (lambda () (setq dash-at-point-docset "rails")))
+;; (add-hook 'rinari-minor-mode-hook
+;;           (lambda () (setq dash-at-point-docset "rails")))
 ;; ;;  find-file-in-project
 ;; (eval-after-load 'ruby-mode
 ;;   '(progn
-;;      (add-to-list 'ffip-patterns "*.css" "*.erb")
+;;      (add-to-list 'ffip-patterns "*.rake" "*.erb")
 ;;     )
 
 ;; (define-key rinari-minor-mode-map (kbd "C-c t") 'rinari-find-test)

@@ -53,5 +53,8 @@
 
                 ;; Game Dev
                 ("Red Blob Games" . "http://www.redblobgames.com/")
+
+                ;; Design
+                ("Dribbbleboard" . "http://dribbbleboard.com/")
                 )
               webjump-sample-sites))
