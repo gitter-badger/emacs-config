@@ -49,6 +49,13 @@
 ;; Use command as the meta key
 ;; (setq ns-command-modifier  'meta)
 
+;; make EasyPG ;; make EasyPG (epa) ask the encryption password just once
+(setq epa-file-cache-passphrase-for-symmetric-encryption t)
+;; 'silent to use symmetric encryption
+;; nil to ask for users unless specified
+;; t to always ask for a user
+(setq epa-file-select-keys t)
+
 ;; Don't show the startup screen
 (setq user-mail-address "lendage@gmail.com")
 ;; "y or n" instead of "yes or no"
