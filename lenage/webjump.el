@@ -56,5 +56,8 @@
 
                 ;; Design
                 ("Dribbbleboard" . "http://dribbbleboard.com/")
+
+                ;; cloud
+                ("Jolicloud" . "https://drive.jolicloud.com/")
                 )
               webjump-sample-sites))
