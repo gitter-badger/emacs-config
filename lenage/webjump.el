@@ -43,6 +43,8 @@
                 ;;
                 ;;CSS
                 ("BootCss" . "http://www.bootcss.com/")
+                ("AnimateCss" . "http://daneden.me/animate/")
+                ("Effeckt.css" . "https://github.com/h5bp/Effeckt.css")
 
                 ;; Rails conf
                 ("rails conf" . "http://www.josephjaber.com/articles/railsconf-2013-talks")
@@ -56,6 +58,7 @@
 
                 ;; Design
                 ("Dribbbleboard" . "http://dribbbleboard.com/")
+                ("graffletopia" . "https://www.graffletopia.com/")
 
                 ;; cloud
                 ("Jolicloud" . "https://drive.jolicloud.com/")
