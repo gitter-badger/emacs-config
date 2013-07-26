@@ -82,17 +82,6 @@
 (global-set-key (kbd "C-x j") 'join-line)
 (global-set-key (kbd "C-j") 'indent-new-comment-line)
 
-;; Mark-multiple and friends
-(defun duplicate-line ()
-  (interactive)
-  (save-excursion
-    (let ((line-text (buffer-substring-no-properties
-                      (line-beginning-position)
-                      (line-end-position))))
-      (move-end-of-line 1)
-      (newline)
-      (insert line-text))))
-
 (global-set-key (kbd "C-c p") 'duplicate-line)
 
 ;; expand-region
@@ -121,6 +110,5 @@
 
 ;; ;; smart open line
 (global-set-key [(shift return)] 'smart-open-line)
-
 ;; ;; dash search at point
 (global-set-key (kbd "C-c d") 'dash-at-point)
