@@ -201,3 +201,8 @@
 (setq gnus-select-method '(nntp "news.gwene.org"))
 
 (require 'rfringe)
+
+;;;; ac-js2 mode
+;; (setq ac-js2-evaluate-calls t)
+;; (add-to-list 'ac-js2-external-libraries "path/to/lib/library.js")
+;; To add completions for external libraries add something like this:
