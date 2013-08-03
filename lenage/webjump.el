@@ -62,5 +62,10 @@
 
                 ;; cloud
                 ("Jolicloud" . "https://drive.jolicloud.com/")
+
+                ;; VC 的虚拟化
+                ("Angel" . "https://angel.co/")
+                ;; 科研的虚拟化
+                ("science exchane" . "https://www.scienceexchange.com/")
                 )
               webjump-sample-sites))

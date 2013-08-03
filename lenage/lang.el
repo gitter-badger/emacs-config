@@ -26,7 +26,9 @@
                                               (unless (yas/expand)
                                                 (indent-for-tab-command)
                                                 (if (looking-back "^\s*")
-                                                    (back-to-indentation))))))))
+                                                    (back-to-indentation))))))
+     (electric-pair-mode 1)
+     ))
 
 (vendor 'coffee-mode)
 ;;; coffee mode

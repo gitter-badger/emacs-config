@@ -35,7 +35,7 @@
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  js2-refactor
+                  auto-complete
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq
                   ;; auto-complete dependenes
@@ -196,6 +196,7 @@
 (require 'diminish)
 (diminish 'undo-tree-mode)
 (diminish 'yas/minor-mode)
+;; (diminish 'subword-mode)
 
 (custom-set-variables '(tramp-verbose 0))
 (setq gnus-select-method '(nntp "news.gwene.org"))
