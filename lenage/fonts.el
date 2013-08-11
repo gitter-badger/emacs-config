@@ -10,9 +10,9 @@
 ;;      )
 
 ;; (set-frame-font "Monaco-12")
-(set-default-font "Monaco-12")
-(set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
-(set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
+;;(set-default-font "WenQuanYi Micro Hei-12")
+;;(set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
+(set-fontset-font t 'han '("WenQuanYi Micro Hei" . "unicode-bmp"))
 (set-fontset-font t 'japanese-jisx0208 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
 ;; (set-fontset-font t 'japanese-jisx0212 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
 

@@ -8,8 +8,6 @@
 (setq yas/root-directory '(
                            "~/.emacs.d/snippets"
                            "~/.emacs.d/elpa/yasnippet-20130722.1832/snippets/"
-                           "~/.emacs.d/vendor/yasnippets-rails/rails-snippets"
-                           "~/.emacs.d/vendor/yasnippets-shoulda"))
-
+                           ))
 (setq yas/use-menu 'abbreviate)
 (yas/jit-load)
