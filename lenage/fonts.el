@@ -2,12 +2,19 @@
 
 ;; From: http://community.schemewiki.org/cgi-bin/scheme.cgi?Emacs
 
-(and window-system
-     (create-fontset-from-fontset-spec
-      (concat
-       "-apple-monaco-medium-r-normal--12-*-*-*-*-*-fontset-monaco,"
-       "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
-     )
+;; (and window-system
+;;      (create-fontset-from-fontset-spec
+;;       (concat
+;;        "-apple-monaco-medium-r-normal--12-*-*-*-*-*-fontset-monaco,"
+;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
+;;      )
+
+;; (set-frame-font "Monaco-12")
+(set-default-font "Monaco-12")
+(set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
+(set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
+(set-fontset-font t 'japanese-jisx0208 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
+;; (set-fontset-font t 'japanese-jisx0212 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
 
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)

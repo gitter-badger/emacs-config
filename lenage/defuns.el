@@ -91,7 +91,105 @@ kill all other visible buffers."
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
-;; ;; Use the text around point as a cue what it is that we want from the
+;; ;; Move current line up or down
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(defun kill-other-buffers ()
+  "Kill all buffers but the current one.
+Don't mess with special buffers."
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
+      (kill-buffer buffer))))
+
+(defun google ()
+  "Google the selected region if any, display a query prompt otherwise."
+  (interactive)
+  (browse-url
+   (concat
+    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
+    (url-hexify-string (if mark-active
+         (buffer-substring (region-beginning) (region-end))
+       (read-string "Google: "))))))
+
+
+(defun indent-buffer ()
+  "Indent the currently visited buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun indent-region-or-buffer ()
+  "Indent a region if selected, otherwise the whole buffer."
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+        (progn
+          (indent-region (region-beginning) (region-end))
+          (message "Indented selected region."))
+      (progn
+        (indent-buffer)
+        (message "Indented buffer.")))))
+
+;; Mark-multiple and friends
+(defun duplicate-line ()
+  (interactive)
+  (save-excursion
+    (let ((line-text (buffer-substring-no-properties
+                      (line-beginning-position)
+                      (line-end-position))))
+      (move-end-of-line 1)
+      (newline)
+      (insert line-text))))
+
+(defun open-with ()
+  "Simple function that allows us to open the underlying
+file of a buffer in an external program."
+  (interactive)
+  (when buffer-file-name
+    (shell-command (concat
+                    (if (eq system-type 'darwin)
+                        "open"
+                      (read-shell-command "Open current file with: "))
+                    " "
+                    buffer-file-name))))
+
+(defun smart-open-line ()
+  "Insert an empty line after the current line.
+Position the cursor at its beginning, according to the current mode."
+  (interactive)
+  (move-end-of-line nil)
+  (newline-and-indent))
+
+;;;; Highlight Comment Annotations TODO, FIXME
+(defun font-lock-comment-annotations ()
+  "Highlight a bunch of well known comment annotations.
+This functions should be added to the hooks of major modes for programming."
+  (font-lock-add-keywords
+   nil '(("\\<\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):"
+          1 font-lock-warning-face t))))
+
+(add-hook 'prog-mode-hook 'font-lock-comment-annotations)
+;; (defadvice ido-find-file (after find-file-sudo activate)
+;;   "Find file as root if necessary."
+;;   (unless (and buffer-file-name
+;;                (file-writable-p buffer-file-name))
+;;     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
+
+;; ;; use the text around point as a cue what it is that we want from the
 ;; ;; editor. Allowance has to be made for the case that point is at the
 ;; ;; edge of a buffer.
 ;; (defun indent-or-expand (arg)
@@ -103,3 +201,14 @@ kill all other visible buffers."
 ;;        (or (eobp) (not (= ?w (char-syntax (char-after))))))
 ;;       (dabbrev-expand arg)
 ;;     (indent-according-to-mode)))
+
+
+;; (global-set-key [remap goto-line] 'goto-line-with-feedback)
+;; (defun goto-line-with-feedback ()
+;;   "Show line numbers temporarily, while prompting for the line number input"
+;;   (interactive)
+;;   (unwind-protect
+;;       (progn
+;;         (linum-mode 1)
+;;         (goto-line (read-number "Goto line: ")))
+;;     (linum-mode -1)))

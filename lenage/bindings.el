@@ -39,7 +39,7 @@
 (global-set-key (kbd "C-'") 'match-paren)
 
 ;; Copry current buffer file name to clipboard
-(global-set-key (kbd "C-c C-v") 'prelude-copy-file-name-to-clipboard)
+(global-set-key (kbd "C-c C-p") 'prelude-copy-file-name-to-clipboard)
 
 ;; Easy inserts
 (global-set-key (kbd "C-.") 'insert-arrow)
@@ -71,6 +71,7 @@
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-p") 'find-file-at-point)
+(global-set-key (kbd "C-x f") 'find-file-in-project)
 
 ;; window switching
 (windmove-default-keybindings) ;; Shift+direction
@@ -79,19 +80,35 @@
 
 ;; Indentation help
 (global-set-key (kbd "C-x j") 'join-line)
-
-;; Mark-multiple and friends
-(defun duplicate-line ()
-  (interactive)
-  (save-excursion
-    (let ((line-text (buffer-substring-no-properties
-                      (line-beginning-position)
-                      (line-end-position))))
-      (move-end-of-line 1)
-      (newline)
-      (insert line-text))))
+(global-set-key (kbd "C-j") 'indent-new-comment-line)
 
 (global-set-key (kbd "C-c p") 'duplicate-line)
 
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+;; multiple-cursor
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; move current line up or down
+(global-set-key [(meta shift up)]  'move-line-up)
+(global-set-key [(meta shift down)]  'move-line-down)
+
+;; ;; Kill Other Buffers
+(global-set-key (kbd "C-c k") 'kill-other-buffers)
+
+;; ;; Google
+(global-set-key (kbd "C-c g") 'google)
+
+;; ;; Indent Region or Buffer
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+;; ;; open with
+(global-set-key (kbd "C-c o") 'open-with)
+
+;; ;; smart open line
+(global-set-key [(shift return)] 'smart-open-line)
+;; ;; dash search at point
+(global-set-key (kbd "C-c d") 'dash-at-point)

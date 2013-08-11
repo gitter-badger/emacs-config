@@ -11,7 +11,6 @@ ede-projects.el
 loaddefs.el*
 auto-save-list
 places
-custom.el
 .svn
 .DS_Store
 tramp
@@ -30,6 +29,7 @@ src/*
 themes/*
 url/*
 var/*
+emms/*
 
 ## exported and encrypted files
 *gpg
@@ -43,6 +43,9 @@ var/*
 ## org stuff
 .org-id-locations
 
+## yasnippet stuff
+.yas-*-snippets.el
+
 ## ignore mail/gnus cruft for those who keep mail in this directory
 drafts
 Mail
@@ -53,6 +56,7 @@ mail
 *.SCORE
 marks
 .session
+.mc-lists.el
 abbrev_defs
 scratch
 secret.org
@@ -60,3 +64,4 @@ secret.org
 .*~
 agent/*
 /.emms-history
+lenage/private.el

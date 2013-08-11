@@ -14,6 +14,6 @@
 ;; Mac-style key-binding mode.  Aquamacs-like
 ;; (mac-key-mode)
 
-;; Full screen mode
+;; full screen mode
 ;; (mac-hide-menu-bar)
 ;; (mac-show-menu-bar)

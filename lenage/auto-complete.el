@@ -22,7 +22,9 @@
 
 
 (set-default 'ac-sources
-             '(ac-source-dictionary
+             '(ac-source-yasnippet
+               ac-source-abbrev
+               ac-source-dictionary
                ac-source-words-in-buffer
                ac-source-words-in-same-mode-buffers
                ac-source-words-in-all-buffer))
@@ -31,7 +33,8 @@
                 sass-mode yaml-mode csv-mode espresso-mode haskell-mode
                 html-mode nxml-mode sh-mode smarty-mode clojure-mode
                 lisp-mode textile-mode markdown-mode tuareg-mode
-                js3-mode css-mode less-css-mode))
+                sass-mode scss-mode ruby-mode
+                js2-mode css-mode rhtml-mode))
   (add-to-list 'ac-modes mode))
 
 

@@ -1,15 +1,12 @@
 (require 'emms-setup)
+(require 'emms-player-mpd)
 (emms-devel)
-(setq emms-player-list
-      '(;emms-player-mpd
-        ;; emms-player-mpg321
-        ;; emms-player-ogg123
-        emms-player-mplayer-playlist
-        emms-player-mplayer))
+(emms-default-players)
 
 ;; setup mpd
 (setq emms-player-mpd-server-name "localhost")
 (setq emms-player-mpd-server-port "6600")
+(setq emms-player-mpd-music-directory "~/Music/")
 (add-to-list 'emms-info-functions 'emms-info-mpd)
 (add-to-list 'emms-player-list 'emms-player-mpd)
 
@@ -83,6 +80,7 @@
 (global-set-key (kbd "C-c e m") 'emms-playlist-mode-go)
 
 (global-set-key (kbd "C-c e t") 'emms-play-directory-tree)
+(global-set-key (kbd "C-c e c") 'emms-player-mpd-connect)
 (global-set-key (kbd "C-c e x") 'emms-start)
 (global-set-key (kbd "C-c e v") 'emms-stop)
 (global-set-key (kbd "C-c e n") 'emms-next)

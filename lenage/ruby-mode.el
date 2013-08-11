@@ -3,7 +3,6 @@
 (defalias 'ri 'yari)
 (global-set-key (kbd "C-h r") 'ri)
 
-
 ;; patches your # key to automatically expand to #{} when typed inside a double quoted string.
 (defun senny-ruby-interpolate ()
   "In a double quoted string, interpolate."
@@ -17,7 +16,11 @@
 
 (eval-after-load 'ruby-mode
   '(progn
-     (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)))
+     (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)
+     (define-key ruby-mode-map (kbd "TAB") nil)
+     (define-key ruby-mode-map (kbd "C-j") nil)
+     )
+  )
 
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer()
@@ -25,20 +28,13 @@
    (interactive)
    (shell-command-on-region (point-min) (point-max) "ruby"))
 
-;; FIXME: it should be available in next versions of ruby-mode.el
-(defun ruby-insert-end ()
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
-
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
-            (ruby-end-mode)
-            (local-set-key [(control c) (control e)] 'ruby-insert-end)
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
+            (electric-pair-mode 0)
+            (subword-mode +1)
             ))
 
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))

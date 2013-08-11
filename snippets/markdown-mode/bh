@@ -1,0 +1,9 @@
+# name: Blog header
+# contributor: Yuan He <lenage@gmail.com>
+# key: bh
+# --
+---
+layout: post
+title: $0
+category: $1
+---
