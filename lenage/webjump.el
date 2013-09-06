@@ -1,4 +1,4 @@
-;; webjump
+;; webjump.el
 (require 'webjump)
 (global-set-key "\C-cj" 'webjump)
 (setq webjump-sites
@@ -62,6 +62,8 @@
 
                 ;; cloud
                 ("Jolicloud" . "https://drive.jolicloud.com/")
+
+                ("randomuser" . "http://randomuser.me/")
 
                 ;; VC 的虚拟化
                 ("Angel" . "https://angel.co/")

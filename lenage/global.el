@@ -37,7 +37,7 @@
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
                   auto-complete
                   ;; Fun with Emacs
-                  nyan-mode tea-time keyfreq
+                  nyan-mode tea-time keyfreq elfeed
                   ;; auto-complete dependenes
                   popup
                   ))

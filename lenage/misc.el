@@ -26,3 +26,8 @@
                    name (file-name-nondirectory new-name)))))))
 
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
+(setq elfeed-feeds
+      '("https://news.ycombinator.com/rss"
+        "http://feeds.feedburner.com/littlebigdetails"
+        ))
