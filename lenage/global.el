@@ -1,10 +1,8 @@
 ;;; Generic emacs settings I cannot live without
-(require 'cl)
 (require 'saveplace)
 (require 'ffap)
 (require 'uniquify)
 (require 'ansi-color)
-(require 'recentf)
 (require 'flymake)
 
 
@@ -22,7 +20,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(setq package-list
+(defvar package-list
       '(
         ;; Language modes
         ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
@@ -35,7 +33,7 @@
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  auto-complete
+                  auto-complete flycheck
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq elfeed
                   ;; auto-complete dependenes
@@ -49,6 +47,9 @@
 
 ;; Use command as the meta key
 ;; (setq ns-command-modifier  'meta)
+
+;; Disable warnning while edit emacs lisp scripts
+(eval-after-load 'flycheck '(setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers)))
 
 ;; make EasyPG ;; make EasyPG (epa) ask the encryption password just once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)
