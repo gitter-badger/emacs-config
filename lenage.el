@@ -34,7 +34,6 @@
 (load "lenage/abbrev")
 (load "lenage/misc")
 (load "lenage/find-file-in-project")
-(load "lenage/bing-api")
 (load "lenage/emms")
 
 (vendor 'org-mouse)
