@@ -1,8 +1,5 @@
 ;;; Ruby
 
-(defalias 'ri 'yari)
-(global-set-key (kbd "C-h r") 'ri)
-
 (setq ruby-electric-expand-delimiters-list '(?\' ?\`))
 
 ;; patches your # key to automatically expand to #{} when typed inside a double quoted string.
