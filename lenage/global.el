@@ -3,7 +3,7 @@
 (require 'ffap)
 (require 'uniquify)
 (require 'ansi-color)
-(require 'flymake)
+;; (require 'flymake)
 
 
 ;; set packages
@@ -47,9 +47,6 @@
 
 ;; Use command as the meta key
 ;; (setq ns-command-modifier  'meta)
-
-;; Disable warnning while edit emacs lisp scripts
-(eval-after-load 'flycheck '(setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers)))
 
 ;; make EasyPG ;; make EasyPG (epa) ask the encryption password just once
 (setq epa-file-cache-passphrase-for-symmetric-encryption t)

@@ -82,7 +82,7 @@
 (global-set-key (kbd "C-x j") 'join-line)
 (global-set-key (kbd "C-j") 'indent-new-comment-line)
 
-(global-set-key (kbd "C-c p") 'duplicate-line)
+(global-set-key (kbd "C-c c") 'duplicate-line)
 
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
@@ -115,3 +115,13 @@
 
 ;;;; js2-refactor mode
 (js2r-add-keybindings-with-prefix "C-c m")
+
+;; key chords
+(require 'key-chord)
+
+(key-chord-define-global "jj" 'ace-jump-word-mode)
+(key-chord-define-global "jl" 'ace-jump-line-mode)
+(key-chord-define-global "jk" 'ace-jump-char-mode)
+(key-chord-define-global "uu" 'undo-tree-visualize)
+
+(key-chord-mode +1)

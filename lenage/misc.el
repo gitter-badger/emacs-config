@@ -30,4 +30,5 @@
 (setq elfeed-feeds
       '("https://news.ycombinator.com/rss"
         "http://feeds.feedburner.com/littlebigdetails"
+        "http://www.cppblog.com/vczh/Rss.aspx"
         ))

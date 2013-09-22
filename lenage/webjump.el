@@ -6,6 +6,7 @@
                 ("lenage's blog" . "blog.lenage.com")
                 ("markdown online preview"   . "socrates.io")
                 ("Github"   . "github.com")
+                ("Github Zen"   . "https://api.github.com/zen")
                 ("Github stars" . "github.com/stars")
                 ("Github Lacoste" . "github.com/theplant/lacoste")
                 ("lighthouse" . "theplant.lighthouseapp.com")
@@ -63,5 +64,9 @@
                 ("Angel" . "https://angel.co/")
                 ;; 科研的虚拟化
                 ("science exchane" . "https://www.scienceexchange.com/")
+                ("go-language" . "https://github.com/yinwang0/blog-cn/blob/8285c2d2c6846b04f0f4ab73e046fb6247d32fd3/_posts/2013-04-24-go-language.md")
+
+                ;; anthor OS
+                ("minix" . "http://www.minix3.org/other/read-more.html")
                 )
               webjump-sample-sites))
