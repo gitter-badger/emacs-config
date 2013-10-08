@@ -4,7 +4,7 @@
 (setq webjump-sites
       (append '(
                 ("lenage's blog" . "blog.lenage.com")
-                ("markdown online preview"   . "socrates.io")
+                ("markdown online preview"   . "http://benweet.github.io/stackedit")
                 ("Github"   . "github.com")
                 ("Github Zen"   . "https://api.github.com/zen")
                 ("Github stars" . "github.com/stars")

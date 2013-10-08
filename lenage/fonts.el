@@ -10,8 +10,8 @@
 ;;      )
 
 ;; (set-frame-font "Profont-14")
-(set-frame-font "Menlo-14")
-;; (set-frame-font "Monaco-14")
+;; (set-frame-font "Menlo-14")
+(set-frame-font "Monaco-14")
 (set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
 (set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
 (set-fontset-font t 'japanese-jisx0208 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))
