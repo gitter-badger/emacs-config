@@ -10,5 +10,10 @@
 ;; Find file in project, with specific patterns
 ;; (global-set-key (kbd "C-x fjs")
 ;;                 (ffip-create-pattern-file-finder "*.js"))
-;; (global-set-key (kbd "C-x fcs")
-;;                 (ffip-create-pattern-file-finder "*.css"))
+
+(eval-after-load 'find-file-in-project
+  (lambda ()
+    '(add-to-list 'ffip-patterns "*.css")
+    '(add-to-list 'ffip-patterns "*.erb")
+    )
+  )

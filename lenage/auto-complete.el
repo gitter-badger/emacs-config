@@ -1,10 +1,14 @@
-(require 'auto-complete)
+;; (require 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
+(ac-config-default)
 (setq ac-auto-start 2)
 (setq ac-auto-show-menu nil)
+(setq ac-use-fuzzy t)
+(setq ac-stop-flymake-on-completing t)
 (setq ac-dwim nil) ; To get pop-ups with docs even if a word is uniquely completed
 ;; (setq ac-ignores '("." "=" "@" "[" "]" "(" ")"))
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)

@@ -1,22 +1,17 @@
-;; webjump
+;; webjump.el
 (require 'webjump)
 (global-set-key "\C-cj" 'webjump)
 (setq webjump-sites
       (append '(
                 ("lenage's blog" . "blog.lenage.com")
-                ("markdown online preview"   . "socrates.io")
+                ("markdown online preview"   . "http://benweet.github.io/stackedit")
                 ("Github"   . "github.com")
+                ("Github Zen"   . "https://api.github.com/zen")
                 ("Github stars" . "github.com/stars")
                 ("Github Lacoste" . "github.com/theplant/lacoste")
                 ("lighthouse" . "theplant.lighthouseapp.com")
                 ("Weibo" . "weibo.com")
-                ("Douban" . "www.douban.com")
-                ("Douban FM" . "douban.fm")
-                ("jing" . "jing.fm")
-                ("cnbeta" . "cnbeta.com")
                 ("SICP video Lectures" . "ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/")
-                ("Qortex" . "qortex.net")
-                ("Qortex Dev" . "qortex.theplant-dev.com")
                 ("character code" . "character-code.com")
                 ("ppurl" . "ppurl.com")
                 ("html5please" . "html5please.com")
@@ -43,6 +38,8 @@
                 ;;
                 ;;CSS
                 ("BootCss" . "http://www.bootcss.com/")
+                ("AnimateCss" . "http://daneden.me/animate/")
+                ("Effeckt.css" . "https://github.com/h5bp/Effeckt.css")
 
                 ;; Rails conf
                 ("rails conf" . "http://www.josephjaber.com/articles/railsconf-2013-talks")
@@ -53,5 +50,23 @@
 
                 ;; Game Dev
                 ("Red Blob Games" . "http://www.redblobgames.com/")
+
+                ;; Design
+                ("Dribbbleboard" . "http://dribbbleboard.com/")
+                ("graffletopia" . "https://www.graffletopia.com/")
+
+                ;; cloud
+                ("Jolicloud" . "https://drive.jolicloud.com/")
+
+                ("randomuser" . "http://randomuser.me/")
+
+                ;; VC 的虚拟化
+                ("Angel" . "https://angel.co/")
+                ;; 科研的虚拟化
+                ("science exchane" . "https://www.scienceexchange.com/")
+                ("go-language" . "https://github.com/yinwang0/blog-cn/blob/8285c2d2c6846b04f0f4ab73e046fb6247d32fd3/_posts/2013-04-24-go-language.md")
+
+                ;; anthor OS
+                ("minix" . "http://www.minix3.org/other/read-more.html")
                 )
               webjump-sample-sites))

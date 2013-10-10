@@ -9,8 +9,9 @@
 ;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
 ;;      )
 
-;; (set-frame-font "Monaco-12")
-(set-default-font "Monaco-12")
+;; (set-frame-font "Profont-14")
+;; (set-frame-font "Menlo-14")
+(set-frame-font "Monaco-14")
 (set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
 (set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
 (set-fontset-font t 'japanese-jisx0208 '("Hiragino Kaku Gothic Pro" . "unicode-bmp"))

@@ -82,18 +82,7 @@
 (global-set-key (kbd "C-x j") 'join-line)
 (global-set-key (kbd "C-j") 'indent-new-comment-line)
 
-;; Mark-multiple and friends
-(defun duplicate-line ()
-  (interactive)
-  (save-excursion
-    (let ((line-text (buffer-substring-no-properties
-                      (line-beginning-position)
-                      (line-end-position))))
-      (move-end-of-line 1)
-      (newline)
-      (insert line-text))))
-
-(global-set-key (kbd "C-c p") 'duplicate-line)
+(global-set-key (kbd "C-c c") 'duplicate-line)
 
 ;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
@@ -121,6 +110,18 @@
 
 ;; ;; smart open line
 (global-set-key [(shift return)] 'smart-open-line)
-
 ;; ;; dash search at point
 (global-set-key (kbd "C-c d") 'dash-at-point)
+
+;;;; js2-refactor mode
+(js2r-add-keybindings-with-prefix "C-c m")
+
+;; key chords
+(require 'key-chord)
+
+(key-chord-define-global "jj" 'ace-jump-word-mode)
+(key-chord-define-global "jl" 'ace-jump-line-mode)
+(key-chord-define-global "jk" 'ace-jump-char-mode)
+(key-chord-define-global "uu" 'undo-tree-visualize)
+
+(key-chord-mode +1)
