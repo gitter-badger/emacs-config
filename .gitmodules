@@ -16,18 +16,6 @@
 [submodule "vendor/revbufs"]
 	path = vendor/revbufs
 	url = https://github.com/emacsmirror/revbufs.git
-[submodule "vendor/js2-mode"]
-	path = vendor/js2-mode
-	url = https://github.com/mooz/js2-mode.git
 [submodule "vendor/auto-complete"]
 	path = vendor/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git
-[submodule "vendor/bingapiel"]
-	path = vendor/bingapiel
-	url = https://github.com/coordinate/bingapiel.git
-[submodule "vendor/bing-api"]
-	path = vendor/bing-api
-	url = https://github.com/coordinate/bingapiel.git
-[submodule "vendor/mu4e"]
-	path = vendor/mu4e
-	url = https://github.com/roupam/mu4e
