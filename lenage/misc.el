@@ -34,4 +34,10 @@
         "http://www.nczonline.net/blog/feed/"
         "http://perfectionkills.com/feed/"
         "http://ejohn.org/category/blog/feed/"
+        "http://blog.youxu.info/feed/"
+        "http://www.verypig.com/?feed=rss2"
+        "http://feeds.feedburner.com/yurii"
+        "http://www.matrix67.com/blog/feed"
+        "http://feeds.feedburner.com/CatChen/Chinese"
+        "http://feeds.feedburner.com/yurii"
         ))
