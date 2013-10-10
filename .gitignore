@@ -30,6 +30,7 @@ themes/*
 url/*
 var/*
 emms/*
+request/*
 
 ## exported and encrypted files
 *gpg
