@@ -28,3 +28,6 @@
 [submodule "vendor/bing-api"]
 	path = vendor/bing-api
 	url = https://github.com/coordinate/bingapiel.git
+[submodule "vendor/mu4e"]
+	path = vendor/mu4e
+	url = https://github.com/roupam/mu4e

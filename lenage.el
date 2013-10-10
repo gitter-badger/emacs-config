@@ -37,6 +37,7 @@
 (load "lenage/emms")
 
 (vendor 'org-mouse)
+(vendor 'mu4e)
 (vendor 'revbufs       'revbufs)
 ;; emacs-weibo
 (vendor 'weibo)

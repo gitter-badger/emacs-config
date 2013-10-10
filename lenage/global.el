@@ -125,6 +125,7 @@
 (setq css-indent-offset 2)
 (setq sh-basic-offset 2)
 (setq-default indent-tabs-mode nil)
+(setq vc-follow-symlinks t)
 
 (setq inhibit-startup-message t)
 (setq ring-bell-function 'ignore)
