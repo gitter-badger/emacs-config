@@ -7,7 +7,7 @@
                              yas/completing-prompt))
 (setq yas/root-directory '(
                            "~/.emacs.d/snippets"
-                           "~/.emacs.d/elpa/yasnippet-20131010.2/snippets/"
+                           "~/.emacs.d/elpa/yasnippet-20131014.928//snippets/"
                            "~/.emacs.d/vendor/yasnippets-rails/rails-snippets"
                            "~/.emacs.d/vendor/yasnippets-shoulda"))
 

@@ -46,6 +46,7 @@
 ;; clojure mode
 (add-hook 'clojure-mode-hook
           (lambda ()
+            (eldoc-mode t)
             (setq clojure-enable-paredit t)
             (setq nrepl-hide-special-buffers t)
             ))
