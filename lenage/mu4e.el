@@ -1,5 +1,3 @@
-(require 'mu4e)
-
 ;; use mu4e to sending email
 (setq mail-user-agent 'mu4e-user-agent)
 (setq mu4e-attachment-dir  "~/Downloads")

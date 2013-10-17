@@ -9,7 +9,6 @@
 ;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
 ;;      )
 
-;; (set-frame-font "Profont-14")
 ;; (set-frame-font "Menlo-14")
 (set-frame-font "Monaco-14")
 (set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))

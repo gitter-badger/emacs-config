@@ -107,6 +107,16 @@ kill all other visible buffers."
   (forward-line -1)
   (indent-according-to-mode))
 
+(defun join-region (beg end)
+  "Apply join-line over region."
+  (interactive "r")
+  (if mark-active
+          (let ((beg (region-beginning))
+                        (end (copy-marker (region-end))))
+                (goto-char beg)
+                (while (< (point) end)
+                  (join-line 1)))))
+
 (defun kill-other-buffers ()
   "Kill all buffers but the current one.
 Don't mess with special buffers."

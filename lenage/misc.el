@@ -40,4 +40,5 @@
         "http://www.matrix67.com/blog/feed"
         "http://feeds.feedburner.com/CatChen/Chinese"
         "http://feeds.feedburner.com/yurii"
+        "http://feeds.feedburner.com/FlyingMachineStudios"
         ))

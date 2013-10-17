@@ -38,7 +38,7 @@
 
 (vendor 'org-mouse)
 (vendor 'mu4e)
-(vendor 'revbufs       'revbufs)
+(vendor 'revbufs)
 ;; emacs-weibo
 (vendor 'weibo)
 (setq weibo-display-image nil)

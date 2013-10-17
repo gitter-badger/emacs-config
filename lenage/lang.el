@@ -43,6 +43,14 @@
           (lambda()
             (setq tab-width 4)))
 
+;; clojure mode
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (setq clojure-enable-paredit t)
+            (setq nrepl-hide-special-buffers t)
+            ))
+
+;; (setq nrepl-hide-special-buffers t)
 
 ;; Auto-start zencoding-mode on any markup modes
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
