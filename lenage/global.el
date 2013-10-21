@@ -33,7 +33,7 @@
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  auto-complete flycheck cider
+                  auto-complete flycheck ac-slime
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq elfeed
                   ;; auto-complete dependenes
@@ -49,11 +49,11 @@
 ;; (setq ns-command-modifier  'meta)
 
 ;; make EasyPG ;; make EasyPG (epa) ask the encryption password just once
-(setq epa-file-cache-passphrase-for-symmetric-encryption t)
+(setq-default epa-file-cache-passphrase-for-symmetric-encryption t)
 ;; 'silent to use symmetric encryption
 ;; nil to ask for users unless specified
 ;; t to always ask for a user
-(setq epa-file-select-keys t)
+(setq-default epa-file-select-keys t)
 
 ;; Don't show the startup screen
 (setq user-mail-address "lendage@gmail.com")
@@ -112,18 +112,18 @@
 
 ;; `brew install aspell --lang=en` (instead of ispell)
 (setq-default ispell-program-name "aspell")
-(setq ispell-list-command "list")
-(setq ispell-extra-args '("--sug-mode=ultra"))
+(setq-default ispell-list-command "list")
+(setq-default ispell-extra-args '("--sug-mode=ultra"))
 
 ;; Don't display password in shell
 (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
 
 ;; tab width
-(setq-default tab-width 2)
-(setq js-indent-level 2)
-(setq c-basic-offset 2)
-(setq css-indent-offset 2)
-(setq sh-basic-offset 2)
+(setq-default tab-width 4)
+(setq-default js-indent-level 4)
+(setq-default c-basic-offset 4)
+(setq-default css-indent-offset 2)
+(setq-default sh-basic-offset 2)
 (setq-default indent-tabs-mode nil)
 (setq vc-follow-symlinks t)
 
@@ -137,7 +137,7 @@
 (electric-pair-mode t)
 (icomplete-mode 1)
 ;; Display time and date in status bar
-(setq display-time-24hr-format t)
+(setq-default display-time-24hr-format t)
 (setq display-time-mode 1)
 (setq size-indication-mode 1)
 

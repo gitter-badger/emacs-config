@@ -44,17 +44,25 @@
             (setq tab-width 4)))
 
 ;; clojure mode
+(add-hook 'cider-interaction-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'clojure-mode-hook
           (lambda ()
             (eldoc-mode t)
+            (paredit-mode t)
             (setq clojure-enable-paredit t)
             (setq nrepl-hide-special-buffers t)
             ))
 
-;; (setq nrepl-hide-special-buffers t)
-
 ;; Auto-start zencoding-mode on any markup modes
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
+
+
+;; Python mode
+(add-hook 'python-mode
+          (lambda ()
+            ;; (elpy-enable)
+            (setq python-indent-offset 4)
+            ))
 
 ;; setup slime with quickliso slime-helper
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
