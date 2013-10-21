@@ -49,8 +49,8 @@
           (lambda ()
             (eldoc-mode t)
             (paredit-mode t)
-            (setq clojure-enable-paredit t)
-            (setq nrepl-hide-special-buffers t)
+            (setq-default clojure-enable-paredit t)
+            (setq-default nrepl-hide-special-buffers t)
             ))
 
 ;; Auto-start zencoding-mode on any markup modes
@@ -60,14 +60,15 @@
 ;; Python mode
 (add-hook 'python-mode
           (lambda ()
-            ;; (elpy-enable)
-            (setq python-indent-offset 4)
+            (elpy-enable)
+            (elpy-clean-modeline)
+            (setq-default python-indent-offset 4)
             ))
 
 ;; setup slime with quickliso slime-helper
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl --noinform --no-linedit")
+(setq-default inferior-lisp-program "sbcl --noinform --no-linedit")
 
 ;; smail-mode
 (autoload 'smali-mode "smali-mode" "Major mode for editing and viewing smali issues" t)
