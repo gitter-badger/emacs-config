@@ -198,7 +198,7 @@
 ;; (diminish 'subword-mode)
 
 (custom-set-variables '(tramp-verbose 0))
-(setq gnus-select-method '(nntp "news.gwene.org"))
+(setq-default gnus-select-method '(nntp "news.gwene.org"))
 
 (require 'rfringe)
 
