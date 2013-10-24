@@ -4,6 +4,7 @@
 
 (load "lenage/env")
 (load "lenage/global")
+(load "lenage/yasnippet")
 (load "lenage/defuns")
 (load "lenage/bindings")
 (load "lenage/maxframe")
@@ -23,7 +24,6 @@
 (load "lenage/mac")
 (load "lenage/server-mode")
 (load "lenage/iswitchb")
-(load "lenage/yasnippet")
 (load "lenage/keyfreq")
 (load "lenage/webjump")
 (load "lenage/lang")

@@ -6,8 +6,6 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-(setq org-agenda-files (list "~/org/home.org" "~/org/works/lacoste.org"))
-
 (setq org-agenda-custom-commands
       '(("D" "Daily Action List"
          (

@@ -56,11 +56,13 @@
 ;; Auto-start zencoding-mode on any markup modes
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
+;; Emacs lisp mode
+(add-hook 'emacs-lisp-mode 'eldoc-mode)
 
 ;; Python mode
 (add-hook 'python-mode
           (lambda ()
-            (elpy-enable)
+            (elpy-mode)
             (elpy-clean-modeline)
             (setq-default python-indent-offset 4)
             ))

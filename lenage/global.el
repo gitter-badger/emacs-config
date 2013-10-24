@@ -26,7 +26,7 @@
         ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
                   lua-mode sass-mode css-mode scss-mode slim-mode
                   ;; Yasnippet
-                  yasnippet yari yas-jit yasnippet-bundle rfringe
+                  yasnippet rfringe ;; yas-jit yasnippet-bundle
                   ;; Themes
                   ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
                   ;; Tools
@@ -194,7 +194,6 @@
 ;; Diminish
 (require 'diminish)
 (diminish 'undo-tree-mode)
-(diminish 'yas/minor-mode)
 ;; (diminish 'subword-mode)
 
 (custom-set-variables '(tramp-verbose 0))
