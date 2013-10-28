@@ -5,6 +5,7 @@
 *.dat
 ## private file
 ede-projects.el
+org-clock-save.el
 .org-id-locations
 
 ## misc
