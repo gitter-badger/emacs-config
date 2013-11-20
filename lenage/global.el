@@ -137,8 +137,8 @@
 (electric-pair-mode t)
 (icomplete-mode 1)
 ;; Display time and date in status bar
-(setq-default display-time-24hr-format t)
-(setq display-time-mode t)
+(display-time-mode 1)
+(setq display-time-24hr-format t)
 (setq size-indication-mode t)
 
 ;; Global undo tree
