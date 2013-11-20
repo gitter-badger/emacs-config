@@ -138,8 +138,8 @@
 (icomplete-mode 1)
 ;; Display time and date in status bar
 (setq-default display-time-24hr-format t)
-(setq display-time-mode 1)
-(setq size-indication-mode 1)
+(setq display-time-mode t)
+(setq size-indication-mode t)
 
 ;; Global undo tree
 ;; C-x u show undotree visualize
