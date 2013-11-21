@@ -33,7 +33,7 @@
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  auto-complete flycheck ac-slime multi-term
+                  auto-complete flycheck ac-slime
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq elfeed
                   ;; auto-complete dependenes
