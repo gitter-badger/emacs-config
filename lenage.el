@@ -32,6 +32,7 @@
 (load "lenage/rails")
 (load "lenage/gist")
 (load "lenage/abbrev")
+(load "lenage/smartparens")
 ;; (load "lenage/multi-term")
 (load "lenage/misc")
 (load "lenage/find-file-in-project")

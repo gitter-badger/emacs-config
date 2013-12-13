@@ -11,7 +11,6 @@
 (setq package-archives
       '(("original"    . "http://tromey.com/elpa/")
         ("gnu"         . "http://elpa.gnu.org/packages/")
-        ("marmalade"   . "http://marmalade-repo.org/packages/")
         ("melpa"       . "http://melpa.milkbox.net/packages/")
         ))
 (package-initialize)
@@ -33,7 +32,7 @@
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  auto-complete flycheck ac-slime
+                  auto-complete flycheck ac-slime smartparens flx-ido
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq elfeed
                   ;; auto-complete dependenes
@@ -134,7 +133,8 @@
 (delete-selection-mode t)
 (set-fringe-style 4)
 (tooltip-mode 1)
-(electric-pair-mode t)
+;; disable since use smartparens mode
+;; (electric-pair-mode t)
 (icomplete-mode 1)
 ;; Display time and date in status bar
 (display-time-mode 1)
