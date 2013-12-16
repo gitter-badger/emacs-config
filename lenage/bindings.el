@@ -125,3 +125,15 @@
 (key-chord-define-global "uu" 'undo-tree-visualize)
 
 (key-chord-mode +1)
+
+;; make some use of the Super key
+(define-key global-map [?\s-d] 'projectile-find-dir)
+(define-key global-map [?\s-f] 'projectile-find-file)
+(define-key global-map [?\s-g] 'projectile-grep)
+(define-key global-map [?\s-m] 'magit-status)
+(define-key global-map [?\s-w] 'delete-frame)
+(define-key global-map [?\s-p] 'projectile-switch-project)
+
+;; TAGS
+(global-set-key "\M-?" 'etags-select-find-tag-at-point)
+(global-set-key "\M-." 'etags-select-find-tag)
