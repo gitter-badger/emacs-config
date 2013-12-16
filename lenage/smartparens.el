@@ -43,10 +43,10 @@
 
 (define-key sp-keymap (kbd "C-]") 'sp-select-next-thing-exchange)
 (define-key sp-keymap (kbd "C-[") 'sp-select-previous-thing)
-(define-key sp-keymap (kbd "C-M-]") 'sp-select-next-thing)
+;; (define-key sp-keymap (kbd "C-M-]") 'sp-select-next-thing)
 
-(define-key sp-keymap (kbd "M-F") 'sp-forward-symbol)
-(define-key sp-keymap (kbd "M-B") 'sp-backward-symbol)
+;; (define-key sp-keymap (kbd "M-F") 'sp-forward-symbol)
+;; (define-key sp-keymap (kbd "M-B") 'sp-backward-symbol)
 
 
 ;;;;;;;;;;;;;;;;;;
