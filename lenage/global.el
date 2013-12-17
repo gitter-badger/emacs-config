@@ -32,7 +32,7 @@
                   magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
                   find-file-in-project rinari undo-tree rainbow-mode todotxt
                   diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  auto-complete flycheck ac-slime smartparens
+                  auto-complete flycheck ac-slime smartparens exec-path-from-shell
                   ;; Fun with Emacs
                   nyan-mode tea-time keyfreq elfeed
                   ;; auto-complete dependenes
@@ -194,6 +194,7 @@
 ;; Diminish
 (require 'diminish)
 (diminish 'undo-tree-mode)
+(diminish 'abbrev-mode)
 ;; (diminish 'subword-mode)
 
 (custom-set-variables '(tramp-verbose 0))

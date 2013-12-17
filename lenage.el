@@ -2,8 +2,8 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
-(load "lenage/env")
 (load "lenage/global")
+(load "lenage/env")
 (load "lenage/yasnippet")
 (load "lenage/defuns")
 (load "lenage/bindings")
