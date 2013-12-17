@@ -191,11 +191,10 @@
 (setq tea-time-sound "~/Music/notifications/Shots-letsgo.m4a")
 (setq tea-time-sound-command "afplay %s")
 
-;; Diminish
-(require 'diminish)
-(diminish 'undo-tree-mode)
-(diminish 'abbrev-mode)
-;; (diminish 'subword-mode)
+;; mode line custom
+(when (require 'diminish nil 'noerror)
+  (diminish 'undo-tree-mode)
+  (diminish 'abbrev-mode "Ab"))
 
 (custom-set-variables '(tramp-verbose 0))
 (setq-default gnus-select-method '(nntp "news.gwene.org"))
