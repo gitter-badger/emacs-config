@@ -10,7 +10,7 @@
 (require 'package)
 (setq package-archives
       '(("original"    . "http://tromey.com/elpa/")
-        ("gnu"         . "http://elpa.gnu.org/packages/")
+        ;;("gnu"       . "http://elpa.gnu.org/packages/")
         ("melpa"       . "http://melpa.milkbox.net/packages/")
         ))
 (package-initialize)
@@ -21,23 +21,36 @@
 
 (defvar package-list
       '(
+        ;; utils
+        s f
         ;; Language modes
-        ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
-                  lua-mode sass-mode css-mode scss-mode slim-mode
-                  ;; Yasnippet
-                  yasnippet rfringe ;; yas-jit yasnippet-bundle
-                  ;; Themes
-                  ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
-                  ;; Tools
-                  magit full-ack gist col-highlight ace-jump-mode ac-dabbrev
-                  find-file-in-project rinari undo-tree rainbow-mode todotxt
-                  diff-hl expand-region diminish dash-at-point dash multiple-cursors
-                  auto-complete flycheck ac-slime smartparens exec-path-from-shell
-                  ;; Fun with Emacs
-                  nyan-mode tea-time keyfreq elfeed
-                  ;; auto-complete dependenes
-                  popup
-                  ))
+          ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
+          lua-mode sass-mode css-mode scss-mode slim-mode json-mode
+          skewer-mode
+          ;; Yasnippet
+          yasnippet rfringe ;; yas-jit yasnippet-bundle
+          ;; Themes
+          ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
+          ;; Tools
+          magit full-ack gist
+          col-highlight
+          ace-jump-mode
+          ac-dabbrev
+          key-chord
+          projectile rinari undo-tree rainbow-mode todotxt
+          diff-hl expand-region diminish dash-at-point dash multiple-cursors
+          auto-complete flycheck ac-slime smartparens exec-path-from-shell
+          ;; ERC
+          erc-hl-nicks
+          ;; Etags
+          etags-select
+          ;; Fun with Emacs
+          nyan-mode tea-time keyfreq elfeed
+          emms
+          ;; auto-complete dependenes
+          popup dropdown-list
+          ;;js2-refactor
+          ))
 
 ;; install the missing packages
 (dolist (package package-list)

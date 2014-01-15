@@ -40,7 +40,7 @@
                                                 (if (looking-back "^\s*")
                                                     (back-to-indentation))))))
      ))
-
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
 ;; setup skewer-setup to make live web development
 (skewer-setup)
 ;; (provide 'js-mode)

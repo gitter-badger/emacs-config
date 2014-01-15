@@ -113,9 +113,6 @@
 ;; ;; dash search at point
 (global-set-key (kbd "C-c d") 'dash-at-point)
 
-;;;; js2-refactor mode
-(js2r-add-keybindings-with-prefix "C-c m")
-
 ;; key chords
 (require 'key-chord)
 

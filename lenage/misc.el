@@ -41,4 +41,12 @@
         "http://feeds.feedburner.com/CatChen/Chinese"
         "http://feeds.feedburner.com/yurii"
         "http://feeds.feedburner.com/FlyingMachineStudios"
+        "https://www.schneier.com/blog/atom.xml"
+        "http://thoughtcrime.org/blog/rss.xml"
+        "http://3.14.by/en/rss"
+        "http://www.qyjohn.net/?feed=rss2"
+        "http://taosay.net/index.php/feed/"
+        "http://z.caudate.me/rss/"
+        "http://webdam.inria.fr/wordpress/feed/"
+        "http://lambda-the-ultimate.org/rss.xml"
         ))
