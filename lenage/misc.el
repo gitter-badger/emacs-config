@@ -49,4 +49,5 @@
         "http://z.caudate.me/rss/"
         "http://webdam.inria.fr/wordpress/feed/"
         "http://lambda-the-ultimate.org/rss.xml"
+        "http://shenfeng.me/atom.xml"
         ))

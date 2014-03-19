@@ -132,5 +132,5 @@
 (define-key global-map [?\s-p] 'projectile-switch-project)
 
 ;; TAGS
-(global-set-key "\M-?" 'etags-select-find-tag-at-point)
-(global-set-key "\M-." 'etags-select-find-tag)
+(global-set-key "\M-." 'etags-select-find-tag-at-point)
+(global-set-key "\M-?" 'etags-select-find-tag)
