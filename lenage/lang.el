@@ -57,7 +57,9 @@
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; Emacs lisp mode
-(add-hook 'emacs-lisp-mode 'eldoc-mode)
+(add-hook 'emacs-lisp-mode
+          (lambda ()
+            (eldoc-mode t)))
 
 ;; Python mode
 (add-hook 'python-mode
