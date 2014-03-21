@@ -61,6 +61,7 @@
           (lambda ()
             (eldoc-mode t)))
 
+
 ;; Python mode
 (add-hook 'python-mode
           (lambda ()
