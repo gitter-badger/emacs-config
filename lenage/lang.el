@@ -57,13 +57,13 @@
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; Emacs lisp mode
-(add-hook 'emacs-lisp-mode
+(add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (eldoc-mode t)))
 
 
 ;; Python mode
-(add-hook 'python-mode
+(add-hook 'python-mode-hook
           (lambda ()
             (elpy-mode)
             (elpy-clean-modeline)

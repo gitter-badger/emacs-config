@@ -33,6 +33,7 @@
 (load "lenage/gist")
 (load "lenage/abbrev")
 (load "lenage/smartparens")
+(load "lenage/markdown")
 ;; (load "lenage/multi-term")
 (load "lenage/misc")
 (load "lenage/find-file-in-project")
@@ -48,3 +49,5 @@
 (vendor 'auto-complete)
 ;; private setting
 (load "lenage/private" 'noerror)
+
+(require 'julia-mode)

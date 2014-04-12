@@ -33,7 +33,7 @@
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
             (subword-mode +1)
-            (setq projectile-tags-command "ctags -Re %s `gem env gemdir`/gems/*")
+            ;; (setq projectile-tags-command "ctags -Re %s `gem env gemdir`/gems/*")
             ))
 
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
@@ -44,5 +44,6 @@
 (add-to-list 'auto-mode-alist '("irbrc$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("sake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("slim$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("god$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("thor$" . ruby-mode))
