@@ -1,11 +1,5 @@
-(vendor 'coffee-mode)
 ;;; coffee mode
-(defun coffee-custom ()
-  "coffee-mode-hook"
-  ;; Emacs key binding
-  (define-key coffee-mode-map (kbd "C-c c-r") 'coffee-compile-buffer))
-
-(add-hook 'coffee-mode-hook '(lambda () (coffee-custom)))
+(custom-set-variables '(coffee-tab-width 2))
 
 ;;; lua mode
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
