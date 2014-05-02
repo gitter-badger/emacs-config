@@ -125,6 +125,18 @@ Don't mess with special buffers."
     (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
       (kill-buffer buffer))))
 
+(defun github ()
+  "Search Github with selected region if any, display a query prompt otherwise."
+  (interactive)
+  (browse-url
+   (concat
+    "https://github.com/search?ref=cmdform&q="
+    (url-hexify-string (if mark-active
+                           (buffer-substring (region-beginning) (region-end))
+                         (read-string "Github: "))))
+   )
+  )
+
 (defun google ()
   "Google the selected region if any, display a query prompt otherwise."
   (interactive)
@@ -132,8 +144,8 @@ Don't mess with special buffers."
    (concat
     "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
     (url-hexify-string (if mark-active
-         (buffer-substring (region-beginning) (region-end))
-       (read-string "Google: "))))))
+                           (buffer-substring (region-beginning) (region-end))
+                         (read-string "Google: "))))))
 
 
 (defun indent-buffer ()
