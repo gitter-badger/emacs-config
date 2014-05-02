@@ -26,7 +26,7 @@
         ;; Language modes
           ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
           lua-mode sass-mode css-mode scss-mode slim-mode json-mode
-          skewer-mode scala-mode2 sbt-mode
+          skewer-mode scala-mode2 sbt-mode gitconfig-mode
           ;; Yasnippet
           yasnippet rfringe ;; yas-jit yasnippet-bundle
           ;; Themes
@@ -40,7 +40,7 @@
           projectile rinari undo-tree rainbow-mode todotxt
           diff-hl expand-region diminish dash-at-point dash multiple-cursors
           auto-complete flycheck ac-slime smartparens exec-path-from-shell
-          cider
+          cider git-link
           ;; ERC
           erc-hl-nicks
           ;; Etags
