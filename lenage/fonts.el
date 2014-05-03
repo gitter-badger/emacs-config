@@ -9,8 +9,9 @@
 ;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
 ;;      )
 
+(setq line-spacing 0.1)
 ;; (set-frame-font "Menlo-14")
-;; (set-frame-font "Consolas-14")
+;; (set-frame-font "Consolas-15")
 (set-frame-font "Monaco-14")
 (set-fontset-font t 'korean-ksc5601 '("GungSeo" . "unicode-bmp"))
 (set-fontset-font t 'han '("Hiragino Sans GB" . "unicode-bmp"))
