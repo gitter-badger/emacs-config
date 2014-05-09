@@ -24,4 +24,5 @@
  '(cursor ((t (:background "SeaGreen4"))))
  '(highlight ((t (:background "#2d4948" :foreground "#e1e1e0"))))
  '(magit-item-highlight ((t (:background "#2d4948"))))
+ '(which-func ((t (:foreground "#95A9C6"))))
  '(region ((t (:background "#338f86" :foreground "#e1e1e0")))))

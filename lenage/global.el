@@ -27,7 +27,7 @@
         ;; Language modes
           ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
           lua-mode sass-mode css-mode scss-mode slim-mode json-mode
-          skewer-mode scala-mode2 sbt-mode gitconfig-mode engine-mode
+          skewer-mode scala-mode2 sbt-mode gitconfig-mode engine-mode bundler
           ;; Yasnippet
           yasnippet rfringe ;; yas-jit yasnippet-bundle
           ;; Themes
@@ -89,6 +89,10 @@
 ;;; Highlight current line
 (global-hl-line-mode 1)
 (global-diff-hl-mode 1)
+;; `diff-hl-diff-goto-hunk'  C-x v =
+;; `diff-hl-revert-hunk'     C-x v n
+;; `diff-hl-previous-hunk'   C-x v [
+;; `diff-hl-next-hunk'       C-x v ]
 
 ;; Add newline at end of files
 (setq require-final-newline t)
@@ -240,6 +244,7 @@
 (powerline-default-theme)
 
 (require 'rfringe)
+(require 'bundler)
 
 ;; enable projectile global
 (projectile-global-mode)
