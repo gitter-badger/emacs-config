@@ -50,4 +50,4 @@
 ;; private setting
 (load "lenage/private" 'noerror)
 
-(require 'julia-mode)
+;; (require 'julia-mode)

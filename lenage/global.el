@@ -12,6 +12,7 @@
       '(("original"    . "http://tromey.com/elpa/")
         ;;("gnu"       . "http://elpa.gnu.org/packages/")
         ("melpa"       . "http://melpa.milkbox.net/packages/")
+        ("org"         . "http://orgmode.org/elpa/")
         ))
 (package-initialize)
 
@@ -26,7 +27,7 @@
         ;; Language modes
           ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
           lua-mode sass-mode css-mode scss-mode slim-mode json-mode
-          skewer-mode scala-mode2 sbt-mode gitconfig-mode
+          skewer-mode scala-mode2 sbt-mode gitconfig-mode engine-mode
           ;; Yasnippet
           yasnippet rfringe ;; yas-jit yasnippet-bundle
           ;; Themes
@@ -40,7 +41,10 @@
           projectile rinari undo-tree rainbow-mode todotxt
           diff-hl expand-region diminish dash-at-point dash multiple-cursors
           auto-complete flycheck ac-slime smartparens exec-path-from-shell
-          cider git-link
+          cider git-link powerline
+
+          ;; Auto-complete plug-in
+          ac-js2
           ;; ERC
           erc-hl-nicks
           ;; Etags
@@ -165,6 +169,20 @@
 ;;;; auto-save mode on
 (setq auto-save-default t)
 
+
+;; enable which func mode  http://emacsredux.com/blog/2014/04/05/which-function-mode/
+(which-function-mode)
+(setq which-func-unknown "n/a")
+;; Show the current function name in the header line
+(which-function-mode)
+;; (setq-default header-line-format
+;;               '((which-func-mode ("" which-func-format " "))))
+;; (setq mode-line-misc-info
+;;             ;; We remove Which Function Mode from the mode line, because it's mostly
+;;             ;; invisible here anyway.
+;;             (assq-delete-all 'which-func-mode mode-line-misc-info))
+
+
 ;; color-theme
 ;; (load-theme 'solarized-light t)
 (load-theme 'misterioso t)
@@ -208,10 +226,14 @@
 ;; mode line custom
 (when (require 'diminish nil 'noerror)
   (diminish 'undo-tree-mode)
-  (diminish 'abbrev-mode "Ab"))
+  (diminish 'abbrev-mode))
 
 (custom-set-variables '(tramp-verbose 0))
 (setq-default gnus-select-method '(nntp "news.gwene.org"))
+
+;; powerline
+(require 'powerline)
+(powerline-default-theme)
 
 (require 'rfringe)
 
@@ -223,6 +245,35 @@
 ;; (add-to-list 'ac-js2-external-libraries "path/to/lib/library.js")
 ;; To add completions for external libraries add something like this:
 
-
 ;; disable sass complication on save
 (setq scss-compile-at-save nil)
+
+;; enable engine-mode to config custom search
+(require 'engine-mode)
+(engine-mode t)
+
+(defengine wolfram-alpha
+  "http://www.wolframalpha.com/input/?i=%s")
+
+(defengine stack-overflow
+  "https://stackoverflow.com/search?q=%s"
+  "C-c / s")
+
+(defengine rfcs
+  "http://pretty-rfc.herokuapp.com/search?q=%s")
+
+(defengine github
+  "https://github.com/search?ref=simplesearch&q=%s"
+  "C-c / o")
+
+(defengine google
+  "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
+  "C-c / o")
+
+(defengine duckduckgo
+  "https://duckduckgo.com/?q=%s"
+  "C-c / d")
+
+(defengine wikipedia
+  "http://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s"
+  "C-c / w")

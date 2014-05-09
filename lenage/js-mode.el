@@ -33,14 +33,15 @@
 (eval-after-load 'js2-mode
   '(progn
      (define-key js2-mode-map (kbd "TAB") (lambda()
-                                            (interactive)
-                                            (let ((yas/fallback-behavior 'return-nil))
-                                              (unless (yas/expand)
-                                                (indent-for-tab-command)
-                                                (if (looking-back "^\s*")
-                                                    (back-to-indentation))))))
-     ))
+                                                 (interactive)
+                                                 (let ((yas/fallback-behavior 'return-nil))
+                                                   (unless (yas/expand)
+                                                     (indent-for-tab-command)
+                                                     (if (looking-back "^\s*")
+                                                         (back-to-indentation))))))))
+
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 ;; setup skewer-setup to make live web development
 (skewer-setup)
 ;; (provide 'js-mode)
