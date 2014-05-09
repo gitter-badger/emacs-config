@@ -171,8 +171,12 @@
 
 
 ;; enable which func mode  http://emacsredux.com/blog/2014/04/05/which-function-mode/
-(which-function-mode)
+(add-to-list 'which-function-mode 'ruby-mode)
+(add-to-list 'which-function-mode 'python-mode)
+(add-to-list 'which-function-mode 'emacs-lisp-mode)
+(add-to-list 'which-function-mode 'js2-mode)
 (setq which-func-unknown "n/a")
+
 ;; Show the current function name in the header line
 (which-function-mode)
 ;; (setq-default header-line-format
