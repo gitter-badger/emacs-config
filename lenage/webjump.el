@@ -1,6 +1,5 @@
 ;; webjump.el
 (require 'webjump)
-(global-set-key "\C-cj" 'webjump)
 (setq webjump-sites
       (append '(
                 ("lenage's blog" . "blog.lenage.com")

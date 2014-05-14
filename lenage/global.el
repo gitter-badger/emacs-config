@@ -42,7 +42,7 @@
           diff-hl expand-region diminish dash-at-point dash multiple-cursors
           auto-complete flycheck ac-slime smartparens exec-path-from-shell
           cider git-link powerline
-
+          robocop
           ;; Auto-complete plug-in
           ac-js2
           ;; ERC
@@ -239,10 +239,6 @@
 (custom-set-variables '(tramp-verbose 0))
 (setq-default gnus-select-method '(nntp "news.gwene.org"))
 
-;; powerline
-(require 'powerline)
-(powerline-default-theme)
-
 (require 'rfringe)
 (require 'bundler)
 
@@ -266,23 +262,27 @@
 
 (defengine stack-overflow
   "https://stackoverflow.com/search?q=%s"
-  "C-c / s")
+  "s")
 
 (defengine rfcs
   "http://pretty-rfc.herokuapp.com/search?q=%s")
 
 (defengine github
   "https://github.com/search?ref=simplesearch&q=%s"
-  "C-c / o")
+  "g")
 
 (defengine google
-  "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
-  "C-c / o")
+  "http://www.google.com/search?ie=utf-8&oe=utf-8&q=%s"
+  "o")
 
 (defengine duckduckgo
   "https://duckduckgo.com/?q=%s"
-  "C-c / d")
+  "d")
 
 (defengine wikipedia
   "http://www.wikipedia.org/search-redirect.php?language=en&go=Go&search=%s"
-  "C-c / w")
+  "w")
+
+;; org-journal
+(require 'org-journal)
+(setq org-journal-dir "~/org/life/journal/")

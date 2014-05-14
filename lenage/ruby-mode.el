@@ -36,6 +36,8 @@
             ;; (setq projectile-tags-command "ctags -Re %s `gem env gemdir`/gems/*")
             ))
 
+(add-hook 'ruby-mode-hook 'rubocop-mode)
+
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
