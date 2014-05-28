@@ -42,7 +42,7 @@
           diff-hl expand-region diminish dash-at-point dash multiple-cursors
           auto-complete flycheck ac-slime smartparens exec-path-from-shell
           cider git-link powerline
-          robocop
+          rubocop
           ;; Auto-complete plug-in
           ac-js2
           ;; ERC
