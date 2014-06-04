@@ -546,6 +546,8 @@
     ("lonly" "lonely" nil 0)
     ("lookign" "looking" nil 0)
     ("lookup" "look up" nil 0)
+    ("lacoste" "lacoste" nil 0)
+    ("lacose" "lacoste" nil 0)
     ("maintenence" "maintenance" nil 0)
     ("makeing" "making" nil 0)
     ("managment" "management" nil 0)
