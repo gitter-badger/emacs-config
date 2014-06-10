@@ -10,7 +10,7 @@
 (setq-default js2-bounce-indent-p t)
 (setq-default js2-consistent-level-indent-inner-bracket-p t)
 (setq-default js2-use-ast-for-indentation-p t)
-(setq-default js2-global-externs '("module" "require" "jQuery" "$" "_" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON" "debugger" "document" "window"))
+(setq-default js2-global-externs '("module" "require" "jQuery" "$" "_" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON" "debugger" "document" "window" "angular" "app" "Date"))
 
 ;; Let flycheck handle parse errors
 (setq-default js2-show-parse-errors nil)
