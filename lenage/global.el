@@ -28,6 +28,7 @@
           ruby-mode yaml-mode clojure-mode coffee-mode go-mode markdown-mode
           lua-mode sass-mode css-mode scss-mode slim-mode json-mode
           skewer-mode scala-mode2 sbt-mode gitconfig-mode engine-mode bundler
+          ansible
           ;; Yasnippet
           yasnippet rfringe ;; yas-jit yasnippet-bundle
           ;; Themes
@@ -43,8 +44,9 @@
           auto-complete flycheck ac-slime smartparens exec-path-from-shell
           cider git-link powerline
           rubocop
+          restclient
           ;; Auto-complete plug-in
-          ac-js2
+          ac-js2 ac-ispell
           ;; ERC
           erc-hl-nicks
           ;; Etags
