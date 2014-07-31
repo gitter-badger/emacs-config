@@ -196,16 +196,17 @@
 
 ;; color-theme
 ;; (load-theme 'solarized-light t)
-;; (load-theme 'misterioso t)
+(load-theme 'misterioso t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme
 ;; (load-theme 'zen-and-art t)             ; nice dark theme
 ;; (load-theme 'pastels-on-dark t)
 ;; (load-theme 'subatomic t)
-(load-theme 'moe-dark t)
+;; (load-theme 'moe-dark t)
 
 ;; powerline
+(require 'moe-theme)
 (require 'powerline)
-(setq moe-theme-mode-line-color 'green)
+(setq moe-theme-mode-line-color 'cyan)
 (powerline-moe-theme)
 
 ;; see M-/ in binding.el
