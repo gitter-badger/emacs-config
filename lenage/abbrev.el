@@ -17,6 +17,12 @@
     ("8p" "π")
     ("8sum" "∑")
 
+    ;; Project base
+    ("asics" "ASICS" nil 0)
+    ("ascis" "ASICS" nil 0)
+    ("laocste" "lacoste" nil 0)
+    ("lcoaste" "lacoste" nil 0)
+
     ;; copied from http://www.emacswiki.org/emacs/autocorrection_abbrev_defs
     ("abbout" "about" nil 0)
     ("abotu" "about" nil 0)

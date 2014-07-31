@@ -32,7 +32,7 @@
           ;; Yasnippet
           yasnippet rfringe ;; yas-jit yasnippet-bundle
           ;; Themes
-          ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
+          ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme moe-theme
           ;; Tools
           magit full-ack gist
           col-highlight
@@ -184,7 +184,7 @@
 (setq which-func-unknown "n/a")
 
 ;; Show the current function name in the header line
-(which-function-mode)
+;; (which-function-mode)
 ;; (setq-default header-line-format
 ;;               '((which-func-mode ("" which-func-format " "))))
 ;; (setq mode-line-misc-info
@@ -193,13 +193,20 @@
 ;;             (assq-delete-all 'which-func-mode mode-line-misc-info))
 
 
+
 ;; color-theme
 ;; (load-theme 'solarized-light t)
-(load-theme 'misterioso t)
+;; (load-theme 'misterioso t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme
 ;; (load-theme 'zen-and-art t)             ; nice dark theme
 ;; (load-theme 'pastels-on-dark t)
 ;; (load-theme 'subatomic t)
+(load-theme 'moe-dark t)
+
+;; powerline
+(require 'powerline)
+(setq moe-theme-mode-line-color 'green)
+(powerline-moe-theme)
 
 ;; see M-/ in binding.el
 (setq hippie-expand-try-functions-list '(try-expand-dabbrev
@@ -224,11 +231,7 @@
 (setq todotxt-file "~/.todo/todo.txt")
 (global-set-key (kbd "C-x t") 'todotxt)
 
-;; powerline
-;; (require 'powerline)
-;; (powerline-default-theme)
-
-;; Tea Time
+;; tea Time
 (require 'tea-time)
 (setq tea-time-sound "~/Music/notifications/Shots-letsgo.m4a")
 (setq tea-time-sound-command "afplay %s")
