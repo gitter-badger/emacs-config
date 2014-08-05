@@ -32,7 +32,8 @@
           ;; Yasnippet
           yasnippet rfringe ;; yas-jit yasnippet-bundle
           ;; Themes
-          ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme moe-theme
+          ;; solarized-theme subatomic-theme zen-and-art-theme qsimpleq-theme
+          ;; moe-theme
           ;; Tools
           magit full-ack gist
           col-highlight
@@ -176,12 +177,13 @@
 (setq auto-save-default t)
 
 
-;; enable which func mode  http://emacsredux.com/blog/2014/04/05/which-function-mode/
-(add-to-list 'which-function-mode 'ruby-mode)
-(add-to-list 'which-function-mode 'python-mode)
-(add-to-list 'which-function-mode 'emacs-lisp-mode)
-(add-to-list 'which-function-mode 'js2-mode)
-(setq which-func-unknown "n/a")
+;; ENABLE WHICH FUNC MODE  http://emacsredux.com/blog/2014/04/05/which-function-mode/
+;;
+;; (add-to-list 'which-function-mode 'ruby-mode)
+;; (add-to-list 'which-function-mode 'python-mode)
+;; (add-to-list 'which-function-mode 'emacs-lisp-mode)
+;; (add-to-list 'which-function-mode 'js2-mode)
+;; (setq which-func-unknown "n/a")
 
 ;; Show the current function name in the header line
 ;; (which-function-mode)
@@ -193,20 +195,19 @@
 ;;             (assq-delete-all 'which-func-mode mode-line-misc-info))
 
 
-
 ;; color-theme
+(require 'moe-theme)
 ;; (load-theme 'solarized-light t)
-(load-theme 'misterioso t)
+;; (load-theme 'misterioso t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme
 ;; (load-theme 'zen-and-art t)             ; nice dark theme
 ;; (load-theme 'pastels-on-dark t)
 ;; (load-theme 'subatomic t)
-;; (load-theme 'moe-dark t)
+(load-theme 'moe-dark t)
 
 ;; powerline
-(require 'moe-theme)
 (require 'powerline)
-(setq moe-theme-mode-line-color 'cyan)
+(setq moe-theme-mode-line-color 'w/b)
 (powerline-moe-theme)
 
 ;; see M-/ in binding.el
