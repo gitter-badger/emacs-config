@@ -33,16 +33,18 @@
             (setq tab-width 4)))
 
 ;; Haskell mode
-(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
-(add-hook 'haskell-mode-hook 'haskell-indent-mode)
-(add-hook 'haskell-mode-hook 'haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'interaction-haskell-mode)
+(defun lenage-haskell-settings ()
+  (haskell-indentation-mode 1)
+  (haskell-indent-mode 1)
+  (haskell-doc-mode 1)
+  (interactive-haskell-mode 1))
+
+(add-hook 'haskell-mode-hook 'lenage-haskell-settings)
 
 ;; clojure mode
 (defun lenage-clojure-settings ()
   (interactive)
-  (eldoc-mode t)
-  (paredit-mode t)
+  (eldoc-mode)
   (setq-default clojure-enable-paredit t)
   (setq-default nrepl-hide-special-buffers t))
 
@@ -55,7 +57,6 @@
 
 ;; Emacs lisp mode
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
-
 
 ;; Python mode
 (defun lenage-python-settings ()

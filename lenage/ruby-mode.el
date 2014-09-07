@@ -28,13 +28,14 @@
    (shell-command-on-region (point-min) (point-max) "ruby"))
 
 ;; Local key bindings
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (local-set-key [(control meta f1)] 'xmp)
-            (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
-            (subword-mode +1)
-            ;; (setq projectile-tags-command "ctags -Re %s `gem env gemdir`/gems/*")
-            ))
+(defun lenage-ruby-settings ()
+  (interactive)
+  (local-set-key [(control meta f1)] 'xmp)
+  (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
+  ;; (setq projectile-tags-command "ctags -Re %s `gem env gemdir`/gems/*")
+  (subword-mode +1))
+
+(add-hook 'ruby-mode-hook 'lenage-ruby-settings)
 
 ;; (add-hook 'ruby-mode-hook 'rubocop-mode)
 
