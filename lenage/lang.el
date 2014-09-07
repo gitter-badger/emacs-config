@@ -33,36 +33,36 @@
             (setq tab-width 4)))
 
 ;; Haskell mode
-(add-hook 'haskell-mode-hook
-          (lambda()
-            (setq tab-width 4)))
+(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+(add-hook 'haskell-mode-hook 'haskell-indent-mode)
+(add-hook 'haskell-mode-hook 'haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'interaction-haskell-mode)
 
 ;; clojure mode
+(defun lenage-clojure-settings ()
+  (interactive)
+  (eldoc-mode t)
+  (paredit-mode t)
+  (setq-default clojure-enable-paredit t)
+  (setq-default nrepl-hide-special-buffers t))
+
+
 (add-hook 'cider-interaction-mode-hook 'cider-turn-on-eldoc-mode)
-(add-hook 'clojure-mode-hook
-          (lambda ()
-            (eldoc-mode t)
-            (paredit-mode t)
-            (setq-default clojure-enable-paredit t)
-            (setq-default nrepl-hide-special-buffers t)
-            ))
+(add-hook 'clojure-mode-hook 'lenage-clojure-settings)
 
 ;; Auto-start zencoding-mode on any markup modes
 ;; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; Emacs lisp mode
-(add-hook 'emacs-lisp-mode-hook
-          (lambda ()
-            (eldoc-mode t)))
+(add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 
 
 ;; Python mode
-(add-hook 'python-mode-hook
-          (lambda ()
-            (elpy-mode)
-            (elpy-clean-modeline)
-            (setq-default python-indent-offset 4)
-            ))
+(defun lenage-python-settings ()
+  (elpy-mode)
+  (elpy-clean-modeline)
+  (setq-default python-indent-offset 4))
+(add-hook 'python-mode-hook 'lenage-python-settings)
 
 ;; setup slime with quickliso slime-helper
 (load (expand-file-name "~/quicklisp/slime-helper.el"))

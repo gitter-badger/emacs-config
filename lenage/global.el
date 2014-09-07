@@ -47,7 +47,7 @@
           rubocop
           restclient
           ;; Auto-complete plug-in
-          ac-js2 ac-ispell
+          ac-js2 ac-ispell ac-cider
           ;; ERC
           erc-hl-nicks
           ;; Etags
@@ -195,8 +195,8 @@
 ;;             (assq-delete-all 'which-func-mode mode-line-misc-info))
 
 
-;; color-theme
 (require 'moe-theme)
+;; color-theme
 ;; (load-theme 'solarized-light t)
 ;; (load-theme 'misterioso t)
 ;; (load-theme 'qsimpleq t)                ;soft and clean white background color-theme

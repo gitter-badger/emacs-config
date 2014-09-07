@@ -52,8 +52,6 @@
 ;;;;;;;;;;;;;;;;;;
 ;; pair management
 
-(sp-local-pair 'minibuffer-inactive-mode "'" nil :actions nil)
-
 ;;; markdown-mode
 (sp-with-modes '(markdown-mode gfm-mode rst-mode)
   (sp-local-pair "*" "*" :bind "C-*")
