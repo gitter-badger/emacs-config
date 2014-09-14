@@ -14,6 +14,8 @@
 ;; CSS mode
 (defun all-css-modes() (css-mode) (rainbow-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
+(add-hook 'scss-mode-hook 'rainbow-mode)
+(add-hook 'sass-mode-hook 'rainbow-mode)
 
 
 ;; markdown-mode
@@ -29,8 +31,7 @@
 
 ;; go mode
 (add-hook 'go-mode-hook
-          (lambda()
-            (setq tab-width 4)))
+          (lambda() (setq tab-width 4)))
 
 ;; Haskell mode
 (defun lenage-haskell-settings ()
@@ -60,8 +61,8 @@
 
 ;; Python mode
 (defun lenage-python-settings ()
-  (elpy-mode)
-  (elpy-clean-modeline)
+  (elpy-mode 1)
+  (elpy-clean-modeline 1)
   (setq-default python-indent-offset 4))
 (add-hook 'python-mode-hook 'lenage-python-settings)
 

@@ -27,7 +27,7 @@
                        (quote ((agenda time-up priority-down tag-up) )))
                       (org-deadline-warning-days 0)))))))
 
-
-
+;; highlight code blocks
+(setq org-src-fontify-natively t)
 (setq org-todo-keywords
       '((sequence "TODO" "OPEN" "COMMITTED" "PENDING_REVIEW" "|" "DONE" "DELEGATED" "PENDING_REPLY")))

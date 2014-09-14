@@ -61,7 +61,7 @@
       '(("ci.theplant-dev.com" "#lacoste")
         (".*a11y.org" "#epub")
         ;; (".*freenode.net" "#emacs" "#html5" "#webkit" "#whatwg" "#rubyonrails" "#go-nuts")
-        (".*freenode.net" "#emacs" "#rubyonrails" "#ubuntu-cn" "#haskell" "#clojure")))
+        (".*freenode.net" "#emacs" "#rubyonrails" "#ubuntu-cn" "#haskell" "#clojure" "#haskell.tw")))
 
 (defun djcb-erc-start-or-switch ()
   "Connect to ERC, or switch to last active buffer"
