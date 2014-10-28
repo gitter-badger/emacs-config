@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 ;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))

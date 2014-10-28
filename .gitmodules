@@ -1,21 +1,18 @@
-[submodule "vendor/yasnippets-rails"]
-	path = vendor/yasnippets-rails
+[submodule "lisp/vendor/yasnippets-rails"]
+	path = lisp/vendor/yasnippets-rails
 	url = https://github.com/eschulte/yasnippets-rails.git
-[submodule "vendor/yasnippets-shoulda"]
-	path = vendor/yasnippets-shoulda
+[submodule "lisp/vendor/yasnippets-shoulda"]
+	path = lisp/vendor/yasnippets-shoulda
 	url = git@github.com:lenage/yasnippets-shoulda.git
-[submodule "vendor/rhtml"]
-	path = vendor/rhtml
+[submodule "lisp/vendor/rhtml"]
+	path = lisp/vendor/rhtml
 	url = https://github.com/eschulte/rhtml.git
-[submodule "vendor/lighthouse-mode"]
-	path = vendor/lighthouse-mode
-	url = https://github.com/fgeller/lighthouse-mode.git
-[submodule "vendor/epresent"]
-	path = vendor/epresent
+[submodule "lisp/vendor/epresent"]
+	path = lisp/vendor/epresent
 	url = https://github.com/technomancy/epresent.git
-[submodule "vendor/revbufs"]
-	path = vendor/revbufs
+[submodule "lisp/vendor/revbufs"]
+	path = lisp/vendor/revbufs
 	url = https://github.com/emacsmirror/revbufs.git
-[submodule "vendor/auto-complete"]
-	path = vendor/auto-complete
+[submodule "lisp/vendor/auto-complete"]
+	path = lisp/vendor/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git

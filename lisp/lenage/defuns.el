@@ -221,3 +221,8 @@ This functions should be added to the hooks of major modes for programming."
 ;;         (linum-mode 1)
 ;;         (goto-line (read-number "Goto line: ")))
 ;;     (linum-mode -1)))
+
+;; defun to open ip-up file
+(defun ip-up ()
+  (interactive)
+  (find-file "/etc/ppp/ip-up"))

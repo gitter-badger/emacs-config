@@ -4,7 +4,7 @@
 (defalias 'rake 'rinari-rake)
 
 ;; ;; rhtml-mode
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rhtml"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/vendor/rhtml"))
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
   (lambda () (rinari-launch)))

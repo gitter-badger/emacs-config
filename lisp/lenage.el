@@ -1,5 +1,5 @@
-(add-to-list 'load-path "~/.emacs.d/vendor")
-(setq custom-file "~/.emacs.d/custom.el")
+(add-to-list 'load-path "~/.emacs.d/lisp/vendor")
+(setq custom-file "~/.emacs.d/lisp/custom.el")
 (load custom-file 'noerror)
 
 (load "lenage/global")
