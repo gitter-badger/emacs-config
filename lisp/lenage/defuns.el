@@ -5,9 +5,9 @@
 ;; http://github.com/defunkt/emacs/blob/master/defunkt/defuns.el
 (defun vendor (library &rest autoload-functions)
   (let* ((file (symbol-name library))
-         (normal (concat "~/.emacs.d/vendor/" file))
+         (normal (concat "~/.emacs.d/lisp/vendor/" file))
          (suffix (concat normal ".el"))
-         (personal (concat "~/.emacs.d/lenage/" file))
+         (personal (concat "~/.emacs.d/lisp/lenage/" file))
 	 (found nil))
     (cond
      ((file-directory-p normal) (add-to-list 'load-path normal) (set 'found t))

@@ -26,7 +26,7 @@
 (global-set-key [(control z)] 'repeat) ; was suspend-frame
 
 ;; Window navigation
-(windmove-default-keybindings 'meta)
+;;(windmove-default-keybindings 'meta)
 
 ;; Mac OS X conventions
 ;;(global-set-key (kbd "M-a") 'mark-whole-buffer) ; was backward-sentence.

@@ -206,7 +206,7 @@
 (load-theme 'moe-dark t)
 
 ;; powerline
-(require 'powerline)
+;;(require 'powerline)
 (setq moe-theme-mode-line-color 'w/b)
 (powerline-moe-theme)
 

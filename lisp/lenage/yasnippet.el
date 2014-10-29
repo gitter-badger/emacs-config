@@ -6,10 +6,10 @@
                              yas-ido-prompt
                              yas-completing-prompt))
 (setq yas-snippet-dirs '(
-                           "~/.emacs.d/snippets"
+                           "~/.emacs.d/lisp/snippets"
                            "~/.emacs.d/elpa/yasnippet-20140427.1224/snippets"
-                           "~/.emacs.d/vendor/yasnippets-rails/rails-snippets"
-                           "~/.emacs.d/vendor/yasnippets-shoulda"))
+                           "~/.emacs.d/lisp/vendor/yasnippets-rails/rails-snippets"
+                           "~/.emacs.d/lisp/vendor/yasnippets-shoulda"))
 
 (setq yas-use-menu 'abbreviate)
 (diminish 'yas-minor-mode)
