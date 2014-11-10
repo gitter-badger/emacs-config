@@ -16,7 +16,16 @@
 (add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
 (add-hook 'scss-mode-hook 'rainbow-mode)
 (add-hook 'sass-mode-hook 'rainbow-mode)
+(eval-after-load 'css-mode
+  '(add-hook 'css-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-css-buffer t t))))
 
+;; HTML mode
+;; (eval-after-load 'sgml-mode
+;;   '(add-hook 'html-mode-hook
+;;              (lambda ()
+;;                (add-hook 'before-save-hook 'web-beautify-html-buffer t t))))
 
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
