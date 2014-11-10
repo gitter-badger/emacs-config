@@ -21,28 +21,31 @@
 (setq-default inferior-js-program-command "node")
 
 (setq-default inferior-js-mode-hook
-      (lambda ()
-        (ansi-color-for-comint-mode-on)
-        ;; Deal with some prompt nonsense
-        (add-to-list 'comint-preoutput-filter-functions
-                     (lambda (output)
-                       (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
-                                                 (replace-regexp-in-string ".*1G.*3G" "> " output))))))
+              (lambda ()
+                (ansi-color-for-comint-mode-on)
+                ;; Deal with some prompt nonsense
+                (add-to-list 'comint-preoutput-filter-functions
+                             (lambda (output)
+                               (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
+                                                         (replace-regexp-in-string ".*1G.*3G" "> " output))))))
 
 (eval-after-load 'js2-mode
   '(progn
      (define-key js2-mode-map (kbd "TAB") (lambda()
-                                                 (interactive)
-                                                 (let ((yas/fallback-behavior 'return-nil))
-                                                   (unless (yas/expand)
-                                                     (indent-for-tab-command)
-                                                     (if (looking-back "^\s*")
-                                                         (back-to-indentation))))))))
+                                            (interactive)
+                                            (let ((yas/fallback-behavior 'return-nil))
+                                              (unless (yas/expand)
+                                                (indent-for-tab-command)
+                                                (if (looking-back "^\s*")
+                                                    (back-to-indentation))))))))
+
+(eval-after-load 'js2-mode
+  '(add-hook 'js2-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 ;; setup skewer-setup to make live web development
 (skewer-setup)
-;; (provide 'js-mode)
-;;; js-mode.el ends here

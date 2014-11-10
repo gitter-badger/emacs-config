@@ -27,7 +27,7 @@
 (load "lenage/keyfreq")
 (load "lenage/webjump")
 (load "lenage/lang")
-(load "lenage/js-mode")
+(load "lenage/js2-mode")
 (load "lenage/ruby-mode")
 (load "lenage/rails")
 (load "lenage/gist")
