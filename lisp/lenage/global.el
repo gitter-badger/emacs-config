@@ -57,7 +57,8 @@
           emms
           ;; auto-complete dependenes
           popup dropdown-list
-          ;;js2-refactor
+          ;; refomat
+          web-beautify
           ))
 
 ;; install the missing packages

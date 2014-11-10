@@ -4,9 +4,8 @@
 ;;;
 ;;;
 ;;; Code:
-(vendor 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(setq-default js2-basic-offset 2)
+(setq-default js2-highlight-level 3)
+(setq-default js2-basic-offset 4)
 (setq-default js2-bounce-indent-p t)
 (setq-default js2-consistent-level-indent-inner-bracket-p t)
 (setq-default js2-use-ast-for-indentation-p t)
@@ -41,6 +40,7 @@
                                                          (back-to-indentation))))))))
 
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
+(add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 ;; setup skewer-setup to make live web development
 (skewer-setup)
