@@ -147,8 +147,8 @@
 (setq-default tab-width 4)
 (setq-default js-indent-level 4)
 (setq-default c-basic-offset 4)
-(setq-default css-indent-offset 2)
-(setq-default sh-basic-offset 2)
+(setq-default css-indent-offset 4)
+(setq-default sh-basic-offset 4)
 (setq-default indent-tabs-mode nil)
 (setq vc-follow-symlinks t)
 
