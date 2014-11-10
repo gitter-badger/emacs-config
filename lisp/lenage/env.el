@@ -4,6 +4,7 @@
   (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
+(setenv "GOPATH" "/Users/lenage/Project/golang")
 ;; (setq exec-path (cons "/usr/local/bin" exec-path))
 ;; (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 ;; (setq exec-path (cons "/usr/local/sbin" exec-path))

@@ -34,6 +34,7 @@
 (load "lenage/abbrev")
 (load "lenage/smartparens")
 (load "lenage/markdown")
+(load "lenage/ag")
 ;; (load "lenage/multi-term")
 (load "lenage/misc")
 (load "lenage/find-file-in-project")
